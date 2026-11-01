@@ -55,6 +55,22 @@ def test_rejects_a_file_without_the_expected_columns(tmp_path):
         read_history(path)
 
 
+@pytest.mark.parametrize(
+    "line, message",
+    [
+        (f"Nov 1 2026,{TAYLOR},T,5,6,", "line 2: date is not YYYY-MM-DD"),
+        (f"2026-11-01,{TAYLOR},T,5,six,", "line 2: followers is not a whole number"),
+        (f"2026-11-01,{TAYLOR},{'x' * 200_000},5,6,", "line 2: field larger than field limit"),
+    ],
+    ids=["date", "number", "csv"],  # short ids: the long row would not fit in PYTEST_CURRENT_TEST on Windows
+)
+def test_rejects_rows_it_cannot_read(tmp_path, line, message):
+    path = tmp_path / "history.csv"
+    path.write_text("date,artist_id,name,monthly_listeners,followers,world_rank\n" + line + "\n", encoding="utf-8")
+    with pytest.raises(ValueError, match=message):
+        read_history(path)
+
+
 def test_rows_are_sorted_by_date_then_artist():
     text = format_history([row("2026-11-02", "b" * 22, 1), row("2026-11-01", "b" * 22, 1), row("2026-11-02", "a" * 22, 1)])
     keys = [line.split(",")[:2] for line in text.splitlines()[1:]]

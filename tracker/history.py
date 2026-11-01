@@ -40,32 +40,43 @@ def _number(text: Optional[str], *, line: int, column: str) -> Optional[int]:
 
 
 def read_history(path: Union[str, Path]) -> List[Row]:
-    """Every row of the history file (an empty list when it does not exist yet)."""
+    """Every row of the history file (an empty list when it does not exist yet).
+
+    Raises ValueError for a file that cannot be read as the history.
+    """
 
     file = Path(path)
     if not file.exists():
         return []
     with file.open(encoding="utf-8-sig", newline="") as handle:
         reader = csv.DictReader(handle)
-        absent = [name for name in FIELDS if name not in (reader.fieldnames or [])]
-        if absent:
-            raise ValueError(f"{file}: missing column(s): {', '.join(absent)}")
-        rows = []
-        for record in reader:
-            day = (record.get("date") or "").strip()
-            if not day:
-                continue
-            line = reader.line_num
-            rows.append(
-                Row(
-                    date=day,
-                    artist_id=(record.get("artist_id") or "").strip(),
-                    name=record.get("name") or "",
-                    monthly_listeners=_number(record.get("monthly_listeners"), line=line, column="monthly_listeners"),
-                    followers=_number(record.get("followers"), line=line, column="followers"),
-                    world_rank=_number(record.get("world_rank"), line=line, column="world_rank"),
+        try:
+            absent = [name for name in FIELDS if name not in (reader.fieldnames or [])]
+            if absent:
+                raise ValueError(f"{file}: missing column(s): {', '.join(absent)}")
+            rows = []
+            for record in reader:
+                text = (record.get("date") or "").strip()
+                if not text:
+                    continue
+                line = reader.line_num
+                try:
+                    day = date.fromisoformat(text).isoformat()
+                except ValueError:
+                    raise ValueError(f"history.csv line {line}: date is not YYYY-MM-DD: {text!r}") from None
+                rows.append(
+                    Row(
+                        date=day,
+                        artist_id=(record.get("artist_id") or "").strip(),
+                        name=record.get("name") or "",
+                        monthly_listeners=_number(record.get("monthly_listeners"), line=line, column="monthly_listeners"),
+                        followers=_number(record.get("followers"), line=line, column="followers"),
+                        world_rank=_number(record.get("world_rank"), line=line, column="world_rank"),
+                    )
                 )
-            )
+        except csv.Error as error:
+            # DictReader counts a line once its record has been read, so the bad record starts on the next one.
+            raise ValueError(f"history.csv line {reader.line_num + 1}: {error}") from None
         return rows
 
 
