@@ -36,13 +36,19 @@ jobs:
     needs: key
     if: needs.key.outputs.present == 'true'
     runs-on: ubuntu-latest
+    # The tracker starts no new request after 20 minutes (--time-limit) and keeps what it
+    # fetched, so a slow API day ends well inside this limit.
     timeout-minutes: 30
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
+        with:
+          # The branch as it is now, not the commit that started the run: a queued run or a
+          # re-run of an old one then builds on the data committed since, without conflicts.
+          ref: ${{ github.ref_name }}
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.11"
           cache: pip
@@ -68,5 +74,9 @@ jobs:
             exit 0
           fi
           git commit -m "data: $(date -u +%Y-%m-%d) snapshot"
-          git pull --rebase
+          if ! git pull --rebase; then
+            git rebase --abort 2>/dev/null || true
+            echo "::error title=Daily update not saved::The new data could not be added on top of the branch: its generated files changed during this run, or GitHub could not be reached. Run the workflow again."
+            exit 1
+          fi
           git push
