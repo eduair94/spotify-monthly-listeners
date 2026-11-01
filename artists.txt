@@ -1,0 +1,518 @@
+# Artists tracked by the daily update, one per line.
+#
+# Write each artist as a 22-character Spotify artist id, a spotify:artist:<id> URI or an
+# https://open.spotify.com/artist/<id> link. Everything after "#" is a comment: the names
+# below are only there to make the list easier to read.
+#
+# One API request covers up to 50 artists, so these 500 take 10 requests a day (about 310 a
+# month, plus the odd retry). The free RapidAPI plan allows 1,000 requests a month.
+# Run `python -m tracker check` after editing to validate the list.
+#
+# How this list was made: from 67 weekly Spotify Top 200 charts read through the API, namely
+# the week of 2026-10-29 for the global chart and 34 countries, plus four earlier weeks
+# (November 2025 to August 2026) for the global, US, UK, Brazil, Mexico, India, Japan and
+# South Korea charts. Each chart's six strongest artists (most and highest-ranked tracks) are
+# in, and the rest are the artists that appear on the most charts. Credits that are not
+# performers (video games, a film soundtrack, record labels) and one profile with almost no
+# listeners of its own were left out.
+
+6X5L6rmyvrWWu60Gx6exiZ  # 54 Ultra
+2jzc5TC5TVFLXQlBNiIUzE  # a-ha
+6noxsCszBEEK04kCehugOp  # A-Mei Chang
+7rBQch7KtqQNQjV5AxdHlE  # A2O
+0Vkn28k7P4K95Ce3knN0hQ  # A2O LITE
+48yaM25WLHmQZXx5NN3DYH  # Aaron Modesto
+711MCceyCBcFnzjGY4Q7Un  # AC/DC
+0lI3rF4hi4op6UxqlLHPzv  # Achille Lauro
+3ozYqVCLohfpXIhalkhM8D  # Aditya Rikhari
+2qanRMyA5bNuTvz1dK45OP  # ADÉLA
+6YVMFz59CuY7ngCxTxjpxE  # aespa
+4D75GcNG95ebPtNvoNVXhz  # AFROJACK
+5kVZa4lFUmAQlBogl1fkd6  # Aimyon
+7eLcDZDYHXZCebtQmVFL25  # Aitana
+0fTSzq9jAh4c36UVb4V7CB  # Alex Warren
+3DiDSECUqqY1AuBP8qtaIa  # Alicia Keys
+3DeOmVSmpv7WknXoo1OS8p  # Alleh
+4eZer1QvRM8Pna0rLToV1K  # Alyssa Grace
+3n16EAnJtz6SZGx2zJssrI  # Amazing Show
+7JBaynR7JFeniONqbnn1U4  # Andrew Choi
+4zCH9qm4R2DADamUHMCa6O  # Anirudh Ravichander
+4p5WgeiPSPpqPDs7T6OkWf  # ANOTR
+2R21vXR83lH98kGeO99Y66  # Anuel AA
+4gdMJYnopf2nEUcanAwstx  # Anuv Jain
+7Ln80lUS6He07XvHI8qqHH  # Arctic Monkeys
+4SsVbpTthjScTS7U2hmr1X  # Arcángel
+3MMDw11m6HJrXlGOE3honc  # Ari Lesmana
+66CXWjxzNUsdJxJ2JdwvnR  # Ariana Grande
+4YRxDV8wJFPHPTeXepOstw  # Arijit Singh
+68CFADZWUwvJMqkCeqmxMJ  # Armaan Khan
+7uDdl5V5AETSFY7K3muu22  # Arthur Nery
+3a1tBryiczPAZpgoZN9Rzg  # Asake
+6P5NO5hzJbuOqSdyPB7SJM  # Ashe
+68KmkJeZGfwe1OUaivBa2L  # ATEEZ
+2oSONSC9zQ4UonDKnLqksx  # Atif Aslam
+7jAs1uPnpfNmT6e5qtEPxq  # ATL Jacob
+0Wwji82sLA0Hcvtuak3omb  # AUDREY NUNA
+6U4hHMBYGDF1f98bGjxC8U  # Ayed
+5SXuuuRpukkTvsLuUknva1  # Baby Keem
+1SIocsqdEefUTE6XKGUiVS  # BABYMONSTER
+6rs1KAoQnFalSqSU4LTh8g  # back number
+4q3ewBCX7sLwd24euuV69X  # Bad Bunny
+7IbxsPdlYelceWNyHAor55  # Banjaare
+4Z8MrrKMBHMPa8d04Ivur8  # Bella Kay
+22wbnEMDvgVIAGdFeek6ET  # Benson Boone
+7a0XAaPaK2aDSqa8p3QnC7  # Beéle
+1zD9gVg8wPOmVfYxTjMHaT  # Bharath
+4Kxlr1PRlDKEB0ekOCyHgX  # BIGBANG
+6qqNVTkY8uBg9cP3Jd7DAH  # Billie Eilish
+1yxSLGMDHlW21z4YXirZDS  # Black Eyed Peas
+41MozSoPIsD1dJM0CLPjZF  # BLACKPINK
+1TA5sGRlKUJXBN4ZyJuDIX  # Blessd
+1GMwSpFzrLd12jUX15bHB6  # BLOK3
+3Ld1g6LjfR2ILDB6SD8aJV  # BLVCKHEART
+3zaDigUwjHvjOkSn0NDf9x  # BNXN
+55ZGFvikpNjQHvtTWS5aZF  # Bolaget
+0du5cEVh5yTK9QJze8zA0C  # Bruno Mars
+00XhexlJEXQstHimpZN910  # Brytiago
+3Nrfpe0tUJi4K4DXYWgMUX  # BTS
+7Cp2hGcriAaDUAWpXnSEwm  # buitruonglinh
+3wcj11K77LjEY1PkEazffa  # Burna Boy
+6dLuQ5qXxIuWc5urxfIiZR  # Calle 24
+7CajNmpbOovFoOoasH2HaY  # Calvin Harris
+1anyVhU62p31KFi8MEzkbf  # Chance the Rapper
+2vjeuQwzSP5ErC1S41gONX  # CHANMINA
+7GlBOeep6PqTfFi59PTUUN  # Chappell Roan
+6VuMaDnrHyPL1p4EHjYLi7  # Charlie Puth
+0uOUeC51AxGnP6hB8gurwt  # Cheema Y
+73sIBHcqh3Z3NyqHKZ7FOL  # Childish Gambino
+2rmkQLzj0k4nZdQehOUByO  # Chino Pacas
+7290H8m1Dwt8G7jm1y9CQx  # Chris Isaak
+4YLtscXsxbVgi031ovDDdh  # Chris Stapleton
+1QAJqy2dA3ihHBFIHRphZj  # Cigarettes After Sex
+78F6Xkd46aMHkr4AP60TXY  # Clarent
+4gzpq5DPGxSnKTe4SA8HAU  # Coldplay
+1ebt9HnXdyYA6KgLXr1n4P  # CORTIS
+3IYUhFvPQItj6xySrBmZkd  # Creedence Clearwater Revival
+2JBUyLiFvpFPWdZGqIGYLD  # Crowd Lu
+5YX5w3ApI8if9LJHhh8tei  # CUZCO$
+4VMYDCV2IEDYJArk749S6m  # Daddy Yankee
+4tZwfgrHOc3mvqYlEYSvVi  # Daft Punk
+6oYf3YTP3CaTNPlUqAK7xJ  # Dalvin La Melodia
+5xY6E5PMZNtz9jDvxTRiGI  # Dangrangto
+20wkVLutqVOYrc0kxFs7rA  # Daniel Caesar
+11pXvO7wYuzRWYONDOBd33  # Danny Chung
+5H1nN1SzW0qNeUEZvuXjAj  # Danny Ocean
+6Ip8FS7vWT1uKkJSweANQK  # Dave
+0Y3agQaa6g2r0YmHPOO9rh  # Davido
+54seKvtsZauR1iauN0ptpo  # De La Rose
+1Z8ODXyhEBi3WynYw0Rya6  # De La Soul
+2YRyPiW98bpkARAS4B3OQP  # Dei V
+72sOBVpZpUwHq7i0vb26lT  # Dexter and The Moonrocks
+5Kmr0b3ip8g9P2i0dLTC3Z  # Disco Lines
+1Zg9Zp2NMNIBUiazqAHr1C  # Dj Andrabeat
+5ffbqOCrcxCejQ7oqfWXm9  # DJ DAVI DOGDOG
+2bHWbDN72wdIF0Y48669zg  # DJ Goja
+2isWi9fP3idxCaGPPEelEQ  # DJ GORDINHO DA VF
+5OLgZmlrgCBKtR47DXwnsk  # Dj Honda
+1bpnl8qbR9GxmiNlkEufW6  # DJ Japa NK
+64aJYyrXljOodnUG6jvhRD  # DJ Luian
+1b8S7EPzdckRyIh0uSbOMI  # DJ Oreia
+540vIaP2JwjQb9dm3aArA4  # DJ Snake
+5p9HO3XC5P3BLxJs5Mtrhm  # Djo
+32vWCbZh0xZ4o9gkz4PsEU  # Dolly Parton
+6USv9qhCn6zfxlBQIYJ9qs  # Dominic Fike
+33ScadVnbm2X8kkUqOkC6Z  # Don Omar
+4Gso3d4CscCijv0lmajZWs  # Don Toliver
+3rSAej8VUifF02zpsGjsRZ  # DONAL
+2g8Pu5gVtDpkYGsP3RLepJ  # Draganov
+3TVXtAsR1Inumwj472S9r4  # Drake
+4bJqqUCbQmRxziUoxUz5mS  # DU'L
+6M2wZ9GZgrQXHCFfjv46we  # Dua Lipa
+7u6LfVyYpEzMpHLL7jTyvU  # Dwele
+6eUKZXaKkcviH0Ku9w2n3V  # Ed Sheeran
+7gR53ad9JjCweCv4f9MWEX  # Eddy Lover
+0RMJOzHDhAKY1o2j0W0vxY  # EJAE
+3S9Hg7sRKhmtWunFZ2yAYP  # El Bogueto
+4BFLElxtBEdsdwGA1kHTsx  # ElGrandeToto
+6BRxQ8cD3eqnrVj6WKDok8  # Ella Langley
+0X2BH1fck6amBIoJhDVmmJ  # Ellie Goulding
+1c22GXH30ijlOfXhfLz9Df  # Elvis Crespo
+7dGJo4pcD2V6oG8kP0tJRR  # Eminem
+7hDt3OE2ubsKzO9rMYPXox  # Emmanuel Cortes
+67hb7towEyKvt5Z8Bx306c  # Empire Of The Sun
+5t5FqBwTcgKTaWmfEbwQY9  # ENHYPEN
+0EyhkwP3UnwGFBy6xwKjSy  # EsDeeKid
+5nGIFgo0shDenQYSE0Sn7c  # Evanescence
+6h5P3J0j1x2lhiDk9w4deZ  # Eypio
+0agUNq8PH1QSgm88EuhM1u  # eńau
+0gmx7cndNJbFM0DAO7fT0s  # F3miii
+5NhgsV7qPWHZqYEMKzbYvo  # Faouzia
+329e4yvIujISKGKz1BZZbO  # Farruko
+2LRoIwlKmHjgvigdNGBHNo  # Feid
+7gZu6kPnY9enEi5FvgTO4F  # Felipe e Rodrigo
+1UwTwoC4T1i6vzwsQgIWB0  # Feza
+08GQAI4eElDnROBrJRGE0X  # Fleetwood Mac
+0FK1hXdXst70HD11n5J26z  # FOLA
+3SXwqSqAoBz9WCI9PDQzY6  # Fontaines D.C.
+7jy3rLJdDQY21OgRLCZ9sD  # Foo Fighters
+0f6TyESD8E1mD2oLJ4TGv1  # For Revenge
+4oLeXFyACqeem2VImYeBFe  # Fred again..
+6vXTefBL93Dj5IqAWq6OTv  # French Montana
+0ys2OFYzWYB5hRDLCsBqxt  # Fuerza Regida
+1RyvyyTE3xzB2ZywiAwp0i  # Future
+5ayJu41CsIbLfnMldF6bj3  # Gangsta
+6gYafDbRgLFc6zFKxKCP22  # GAVIN:D
+5xXSrTidFvVRJmiam2Zh1o  # GENER8ION
+27LlKWxS3KXW7RRAxN5S8s  # Geolier
+1iCnM8foFssWlPRLfAbIwo  # Gigi Perez
+3uwAm6vQy7kWPS2bciKWx9  # girl in red
+3AA28KZvwAUcZuOKwyblJQ  # Gorillaz
+4tuJ0bMpJh08umKkEXKUI5  # Gracie Abrams
+1eIYP01ZLPKEExhcV6xFgt  # Grelo
+1dKdetem2xEmjgvyymzytS  # Grupo Firme
+6XkjpgcEsYab502Vr1bBeW  # Grupo Frontera
+6vTqEFbTtTRJsuIpzZgjxi  # Grupo Menos É Mais
+3qm84nBOXUEQ2vnTfUTTFC  # Guns N' Roses
+0QntOArZgiNHoemAzwJPu5  # Gur Sidhu
+26VFTg2z8YR0cCuwLzESi2  # Halsey
+7fmXV2O48buswss04YetaN  # HANA
+5wVJpXzuKV6Xj7Yhsf2uYx  # HANRORO
+6KImCVD70vtIoJWnq6nGn3  # Harry Styles
+1ZLU77nRzQIaP23mVSYpCQ  # Hearts2Hearts
+43FkTZ35A6B7miP8a5AlPX  # Helabusador
+4NsbfTEC3nOcc0vOpZ1rRc  # HELLMERRY
+3p7PcrEHaaKLJnPUGOtRlT  # Henrique & Juliano
+0ocHleb3SllGNQQcDH35Xz  # Herencia De Grandes
+7lbSsjYACZHn1MSDXPxNF2  # Hikaru Utada
+51kyrUsAVqUBcoDEMFkX12  # Hindia
+3fyqTnSY7KwpOnO6zdHPVH  # Houda
+2FXC3k01G6Gw61bmprjgqS  # Hozier
+5PlfkPxwCpRRWQJBxCa0By  # HUGEL
+1LIuN7ov1IBQDdLsU83ojl  # Hugo & Guilherme
+73nQT8Arf05XV666SlvrVQ  # Humlan Djojj
+2yNNYQBChuox9A5Ka93BIn  # HUNTR/X
+2TjgzYcbTdsZjbT9OItIeB  # Héctor "El Father"
+2AfmfGFbe0A0WsTYm0SDTx  # i-dle
+3nqS8jzqmsPKFJTp0BOIel  # Ikky
+36cgvBn0aadzOijnjjwqMN  # ILLIT
+3GdSQUH1BRtl9UrrtuwJlP  # Irshad Kamil
+6RHTUrRF63xao58xh9FXYJ  # IVE
+1vyhD5VmyZ7KMfW5gqLgo5  # J Balvin
+0b1sIQumIAsNbqAoIClSpy  # j-hope
+6l3HvQ5sa6mXTsMTB19rO5  # J. Cole
+24b0qNYNgeOfpP5rbljIB3  # JADE
+2LkkwxA19J8C52wPQl5bG6  # Jamie Miller
+07YZf4WDAMNwqr4jfgOZ8y  # Jason Derulo
+2elBjNSdBE2Y3f0j1mjrql  # Jay Chou
+2cPqdH7XMvwaBJEVjheH8g  # Jay Wheeler
+3nFkdlSjzX9mRTtwJOzDYB  # JAŸ-Z
+250b0Wlc5Vk0CoUsaCY84M  # JENNIE
+2DlGxzQSjYe5N6G9nkYghR  # Jennifer Lopez
+35oGZihZclGoTVuICPXRP9  # Jere Klein
+1oSPZhvZMIrWW5I41kPkkY  # Jimin
+5vV3bFXnN6D6N3Nj4xRvaV  # Jin
+42OtrLDsfIE3pD915uvaju  # Josefine Götestam
+0rvjqX7ttXeg3mTy8Xscbt  # Journey
+6xerOqBLmelL3xZNZkVbGl  # João Gustavo e Murilo
+1H6X7yhnXZg73f9bssaj1Q  # Judeline
+6HaGTQPmzraVmaVxvz6EUc  # Jung Kook
+7Gi6gjaWy3DxyilpF1a8Is  # Junior H
+1uNFoZAHBGtllmzznpCI3s  # Justin Bieber
+1LMyTeRhjaitILs98h3MaF  # Jósean Log
+4gOc8TsQed9eqnqJct2c5v  # K/DA
+1bNjWBFWsAAzZSR59lRdpR  # Kabza De Small
+70kkdajctXSbqSMJbQO424  # Kacey Musgraves
+1U1el3k54VvEUzo3ybLPlM  # Kali Uchis
+5K4W6rqBFWDnAN6FQUkS6x  # Kanye West
+3UTF2no3muGdiFXVujl94i  # Kapo
+6DARBhWbfcS9E4yJzcliqQ  # Karan Aujla
+790FomKkXshlbRYZFtlgla  # KAROL G
+3c0gDdb9lhnHGFtP4prQpn  # KATSEYE
+6jJ0s89eD6GaHleKKya26X  # Katy Perry
+53A0W3U0s8diEn9RhXQhVz  # Keane
+0cGUm45nv7Z6M6qdXYQGTX  # Kehlani
+3BmGtnKgCSGYIUhmivXKWX  # Kelly Clarkson
+2YZyLoL8N0Wb9xBt1NhZWg  # Kendrick Lamar
+1snhtMLeb2DYoMOcVbb8iB  # Kenshi Yonezu
+2RYonYiVhhzBz82UFXOvEN  # KEVIN WOO
+1vfezMIyCr4XUdYRaKIKi3  # Keyshia Cole
+6LuN9FCkKOj5PcnpouEgny  # Khalid
+0EUR8jz8L936AEbV2Spkca  # Kid Yugi
+63sat2XSMKdwKfqspmYQKP  # KiiiKiii
+6wxfx1yhyqjCPYwwxJktR2  # King Gnu
+2qk9voo8llSGYcZ6xrBzKx  # Kings of Leon
+7mW7Tv7NvywKKXqafZo0Lc  # KPop Demon Hunters Cast
+3g9MKjIP9xrMTY5Pbwr6Nk  # Kreamly
+3i6lAgVHplDXb6zrjIeBeK  # Kris R.
+2IKfr1JgPRXmXKAWwrABc6  # Kushagra
+4vyibjuGePnrB7BzbHkA6u  # L'morphine
+00Lc7Ok0Grodr365KFTSi3  # La Factoria
+0IEzMvarfVycBJAXjjEZOL  # La Pantera
+6k9F0oaxCXxbdTFDTdZihN  # La Rvfleuze
+1HY2Jd0NmPuamShAr6KMms  # Lady Gaga
+00FQb4jTyendYWaN8pK0wa  # Lana Del Rey
+6XTGKOV9jceQ6f67lnhpbF  # LATIN MAFIA
+3MdXrJWsbVzdn6fe5JYkSQ  # Latto
+7gW0r5CkdEUMm42w9XpyZO  # Laufey
+4SpbR6yFEvexJuaBpgAU5p  # LE SSERAFIM
+6FJeuwLBCX8VSTf6hp1Vc9  # Lege-Cy
+3hTffafUYLLgO4yuPAxb5U  # Lenin Ramírez
+3hfWiirwdO1ijoZQwj7uzZ  # Lil Naay
+1pBLC0qVRTB5zVMuteQ9jJ  # Lily-Rose Depp
+75MOYjGEyyH5U4ZFHOPvxR  # Lim Young Woong
+6XyY86QOPPrYVGvF9ch6wz  # Linkin Park
+5L1lO4eRHmJ7a0Q6csE5cT  # LISA
+7Djt5FHbKywvcpV4yplfcF  # lohleq
+67FB4n52MgexGQIG8s0yUH  # Lola Young
+6ltzsmQQbmdoHHbLZ4ZN25  # Lord Huron
+77Zc5MMUIMJriEDAcaDspi  # LOS DOS DE TAMAULIPAS
+5kVgcCdPbeUwxBqWxi2Ktl  # Luan Pereira
+4axKuDPr6WKcDCyh8vueTY  # Luar La L
+5bv5RplEOwdCvhq0EILh9E  # Lucenzo
+1y6tVxTqgNfqxTayfohSKJ  # Lucho RK
+3ipn9JLAPI5GUEo4y4jcoi  # Ludacris
+4jhJ8cnJ9vYKyCh289nuwQ  # M!LK
+4LLpKhyESsyAXpc4laK94U  # Mac Miller
+1t17z3vfuc82cxSDMrvryJ  # Macaroni Empitsu
+3JhNCzhSMTxs9WLGJJxWOY  # Macklemore
+5BcAKTbp20cv7tC5VqPFoC  # Macklemore & Ryan Lewis
+3wOsYKZM0zcKNasi3I7fP4  # Mahalini
+3e8V8NqZf6jsUjDEI6rwst  # Majki
+5iM4dDbBN6a4OqxKPuxgS6  # Major SPZ
+7eKkW1zo5uzW8kUntiiBvz  # Malcolm Todd
+1Kjs5u8GQf6zCFdTj6SI9E  # Malik Montana
+1r4hJ1h58CWwUQe3MxPuau  # Maluma
+2T1aUibqR2QC2sINIDQOAK  # Mambo Kingz
+7yK3vix9XmeNwPDmjGs78F  # Manal
+2WjzL05RyqIk5n53sZc9nf  # manifest
+0tmwSHipWxN12fsoLcFU3B  # Manuel Turizo
+5FQ8tBUtIamA2hRtatrYUF  # Marc Seguí
+3tJnB0s6c3oXPq1SCCavnd  # Marco Antonio Solís
+0BHm7qbh3ENxvXzkQAG7MP  # Mari Fernandez
+4iHNK0tOyZPYnBU7nGAgpQ  # Mariah Carey
+04gDigrS5kc9YWfZHwBETP  # Maroon 5
+5AZuEF0feCXMkUCwQiQlW7  # Marracash
+51OKuyM4BiiYxFm8Mi6fa9  # Mauvais djo
+1VBjib1ykqXxss9Tw5YuR9  # Mavo
+37w38cCSGgKLdayTRjna4W  # Mazzy Star
+5XUMgbLR3zyRPesnTQY31C  # MC GH do 7
+5s27i7oqhNWIcE4HeoVdq0  # MC GP
+2q9wk5fkeU2C9CgCKdh4AN  # Mc IG
+3oAVbOfRvgOoCAEKnpohSo  # Mc Iguinho Ct
+6qrqAYlS6lUj2BVXax7SZW  # Mc Jacaré
+2f8xoxornfSw6ePzgyM9NO  # MC Jvila
+1mV9h1AwhRXSjBFcYpajgY  # Mc Lele JP
+6VyttZwyEMGBl90oGdKCB8  # MC Leozinho ZS
+70jpkgy5oGT4YjaGFpCpk7  # MC LUUKY
+1CbQrKvCpEnekM3QMGJtXK  # MC Meno K
+4LHTgACY32k94VDjenF0nP  # Mc Negão Original
+54bV1pHNm5h5EcEgMis1RC  # Mc Rodrigo do CN
+75i9GaW2MJUgt4BkdUnuUY  # MC Ryan SP
+6aoGgTKGqtsjj48ymcNs4Z  # MC Tuto
+5eJi7nckPalxu8R7AAyfuO  # MC Willian
+5Ppie0uPnbnvGBYRwYmlt0  # Megan Moroney
+7ySZCEP4HFGckYYPK5rqFI  # Melody
+3fMbdgg4jU18AjLCKBhRSm  # Michael Jackson
+360IAlyVv4PCEVjgyMZrxK  # Miguel
+3GxKJzJK4LpsYGXQrw77wz  # Mimi Webb
+09UmIX92EUH9hAK4bxvHx6  # Mithoon
+779v40cWIJUUoIDtC1IGaF  # MIYEON
+4boI7bJtmB1L3b1cuL75Zr  # Mon Laferte
+4oUHIQIBe0LHzYfvXNW4QM  # Morgan Wallen
+6sBSLIunx1Je0Y2T77wpkP  # Motive
+4QvgGvpgzgyUOo8Yp8LDm9  # Mrs. GREEN APPLE
+7iK8PXO48WeuP03g8YR51W  # Myke Towers
+6UgERnTHmjk3qXM9x5vzyO  # Nadhif Basalamah
+0elWFr7TW8piilVRYJUe4P  # Natanael Cano
+7o95ZoZt5ZYn31e9z1Hc0a  # Natasha Bedingfield
+1qUjOF5fzrpoNycD36b2jZ  # Nate Ruess
+6WmXWHmfBMhupyIs8MSqtu  # natori
+1ruutHJcECI7cos2n5TqpO  # Nayer
+5xh6szshoZ0UfZD1x6QzZG  # NDS
+21E3waRsmPlU7jZsS13rcj  # Ne-Yo
+5bXNU0MAF2HSqyFPhYtscH  # Neckwav
+2jw70GZXlAI8QzWeY2bgRc  # Nelly Furtado
+6pV5zH2LzjOUHaAvENdMMa  # Neton Vega
+6HvZYsbFfjnjFrWF950C9d  # NewJeans
+6deZN1bslXzeGvOLaLMOIF  # Nickelback
+0hCNtLu0JehylgoiP8L4Gh  # Nicki Minaj
+6Te49r3A6f5BiIgBRxH7FH  # Ninho
+6olE6TJLqED3rqDCT0FyPh  # Nirvana
+5mcQQWaTilvZ99xmDg9LCU  # Nkeshemba
+28ot3wh4oNmoFOdVajibBl  # NMIXX
+2RQXRUsr4IW1f3mKyKsy4B  # Noah Kahan
+4XFkDALFTsSHVnRtJSsaMN  # Number_i
+2DaxqgrOhkeH0fpeiQq2f4  # Oasis
+5Vo1hnCRmCM6M4thZCInCj  # OFFICIAL HIGE DANDISM
+00x1fYSGhdqScXBRpSj3DW  # Olivia Dean
+1McMsnEElThX1knmY4oliG  # Olivia Rodrigo
+0rUu2qzqezBrCddX1RuUyJ  # Omar Camacho
+3E12tRURRvPfHz0hAMCFYc  # Omar Courtz
+5Pwc4xIPtQLFEnJriah9YJ  # OneRepublic
+3l9G1G9MxH6DaRhwLklaf5  # Oscar Maydon
+4zvO09rVUIVTeALhs6xLoB  # Otsochodzi
+3m5qlPf2OkihLz3dRYnkPA  # Ovy On The Drums
+1i8SpTcr7yvPOmcqrbnVXY  # Ozuna
+1KCSPY1glIKqW2TotWuXOR  # P!nk
+5qIpstBGrGteJZg1xIvbiz  # Panda
+57htMBtzpppc1yoXgjbslj  # Park Hyo Shin
+6byQKddO1b34lXC2ZEjehQ  # Patricio Rey y sus Redonditos de Ricota
+5wbf52LA6kcaboHSN6NEF1  # PEDRO SAMPAIO
+12GqGscKJx3aE4t07u7eVZ  # Peso Pluma
+78rUTD7y6Cy67W1RVzYs7t  # PinkPantheress
+0TnOYISbd1XYRBk9myaseg  # Pitbull
+2jSGzJw0ebJLu7OLVSOcBP  # Plan B
+0k2zyzGq6HX383VlMBOvRG  # PLAVE
+699OTQXzgjhIYAHMy9RyPD  # Playboi Carti
+39HJXjH5hKcCzaU0g6mv8G  # Plutonio
+250LLR8V4fFq1XFzAB1ZN5  # Poizi
+1aMt4A5jrQHxDYyC7rXgV0  # Pol Granch
+246dkjvS1zLTtiykXe5h60  # Post Malone
+5a2EaR3hamoenG9rDuVn8j  # Prince
+1wRPtKGflJrBx9BmLsSwlU  # Pritam
+6HEMZkIMQAPnd36iLsUlTx  # PUN
+4bB3nz947QqaXQ5DZFcZgS  # Qlas
+52iwsT98xCoGgiGntTiR7K  # Quevedo
+30mNTnmvPn3HwXA5dW1Iza  # Racoon
+4Z8W4fKeB5YxbusRsdQVPb  # Radiohead
+5LcNPa8f8bRmZqELgoRFkN  # Raim Laode
+5LtHZB7vU02HtNoOzNcVhc  # Ramy Sabry
+02QBz6b5fpeADDbuTE1C59  # RAPROJECT SIX
+1mcTU81TzQhprhouKaTkpq  # Rauw Alejandro
+5RTLRtXjbXI2lSXc6jxlAz  # Ravyn Lenae
+4e0nWw2r4BoQSKPQ2zpU13  # Ray Dalton
+5KKpBU5eC2tJDzf0wmlRp2  # RAYE
+0L8ExT028jH3ddEcZwqJJ5  # Red Hot Chili Peppers
+6U1dV7aL68N7Gb0Naq34V5  # REI AMI
+2IMZYfNi21MGqxopj9fWx8  # Rels B
+5deOsjuFTKrNMJW3rKuL8S  # RESCENE
+7o5F7ecSmTFTIt9lrDtB0l  # Rey Tony
+4sY0lTSkfDMMt27cVvFT6o  # Rico Ace
+5pKCCKE2ajJHZ9KAiaK11H  # Rihanna
+1RaZAbVB4yopz69N1XlZvj  # Rippy Grewal
+4cYbf45YbZptNISnhay0xH  # ROA
+5lwmRuXgjX8xIwlnauTZIP  # Romeo Santos
+2yCnfrc4kI0XxzqLUMPiBk  # Roni
+7ltDVBr6mKbRvohxheJ9h1  # ROSALÍA
+3eVa5w3URK5duf6eyVDbu9  # ROSÉ
+0UDlBvCj6BwV8uYLf8zzKS  # Royal MusiQ
+1XEVu7gdRFfzEFqsPrancH  # rusowsky
+7j6DKwmjbxvpQO8h914uEz  # Ryan Castro
+5mZJerulcERBZV7xnhrVp1  # Ryan Lewis
+29S4JzoFUP1MCyMgKd83zM  # Saaheal
+6DPTJXd1omQ1oTiR1Vy9CZ  # Sabah Mahmod
+74KM79TiuVKeVCqs8QtB0B  # Sabrina Carpenter
+1mBydYMVBECdDmMfE2sEUO  # Sachin-Jigar
+0BJ2EjOqcfgFvlZXNKrNbE  # Saja Boys
+1NjxFrpEGZTV2Ny0OJxeWu  # Sal Priadi
+6zlR5ttMfMNmwf2lecU9Cc  # Sam Fender
+1eDupbD9kIx8UaZlzcBG5r  # samUIL Lee
+2pGRniGOJSOvYoK3dGaBb8  # Sayeed Quadri
+3Isy6kedDrgPYoTS1dazA9  # Sean Paul
+0C8ZW7ezQVs4URX5aX7Kqx  # Selena Gomez
+4zmZ8lVLzGc84S4v2B1rLx  # Seyi Vibez
+23TFHmajVfBtlRx5MXqgoz  # Sfera Ebbasta
+3y2cIKLjiOlp1Np37WiUdH  # Shaboozey
+0EmeFodog0BfCgMzAIvKQp  # Shakira
+465OXuCU8YZNmVG1leLwQ9  # Shashwat Sachdev
+22XDOoz1O9YU6Ekq5FEcK1  # Shaw
+7n2wHs1TKAczGzO7Dd2rGr  # Shawn Mendes
+3CIRif6ZAedT7kZSPvj2A4  # She & Him
+2K5nCggbhSZ00YCYP5qkZS  # Shiva
+0oOet2f43PA68X5RxKobEy  # Shreya Ghoshal
+5WUlDfRSoLAfcVSX1WnrxN  # Sia
+02gSuSAWEdWa5UOvqzjX6v  # SIENNA SPIRO
+2eK9gcJQ6uqVvJL63dnOM3  # Simone Mendes
+117XFtbZPnCI1EYKjYZWJc  # Skusta Clee
+0UuiWPm9FpWvRuWNrXO98N  # Snow Man
+0F3tUZeb9dLNEpxCpzEBQt  # SOLTO (FR)
+4G9NDjRyZFDlJKMRL8hx3S  # sombr
+6CGGvCBHWqQ4HXtn5aLhbh  # SOOBIN
+0hrMKLqgNEIemiF4Ag8dTI  # Sophie Powers
+6Xg22wJOAcnvPUfk5WvODH  # SOYEON
+0SIXZXJCAhNU8sxK0qm7hn  # Stefanie Sun
+6hp2uD84OrQ3u3ukmTjLz2  # STELLA LEFTY
+57vWImR43h4CaDao012Ofp  # Steve Lacy
+5Do9u0GoN4gFn6Nk8NGDhh  # Stormy
+2dIgFjalVxs4ThymZ67YCE  # Stray Kids
+1zNqQNIdeOUZHb8zbZRFMX  # Swae Lee
+7tYKF4w9nC0nq9CsPZTHyP  # SZA
+0GM7qgcRCORpGnfcN2tCiB  # Tainy
+6QoCrBHsojKnOrsGNfRcTN  # Talwiinder
+5INjqkS1o8h1imAzPqGZBb  # Tame Impala
+5rCq30EbJ3DfZPKybGZj8F  # Tamer Ashour
+45dkTj5sMRSjrmBSBeiHym  # Tate McRae
+06HL4z0CvFAxyc27GXpf02  # Taylor Swift
+4bthk9UfsYUYdcFyqxmSUU  # Tears For Fears
+33qOK5uJ8AR2xuQQAhHump  # Teddy Swims
+5mHUmlJWkcoOk1NbjfrXWz  # Temper City
+687cZJR45JO7jhk1LHIbgq  # Tems
+1g6DVpTS6w8meqwY8QGy1L  # Thatohatsi
+69GGBxA162lTqCwzJG5jLp  # The Chainsmokers
+7t0rwkOPGlDPEhaOcVtOt9  # The Cranberries
+2sil8z5kiy4r76CRTXxBCA  # The Goo Goo Dolls
+2tIP7SsRs7vjIcLrU85W8J  # The Kid LAROI
+0C0XlULifJtAgn6ZNCW2eu  # The Killers
+2sSGPbdZJkaSE2AbcGOACx  # The Marías
+77SW9BnxLY8rJ0RciFqkHh  # The Neighbourhood
+1zxDewzd2j1ZdSBGaYcr0y  # The Outfield
+5NGO30tJxFlKixkPSgXcFE  # The Police
+3AQRLZ9PuTAozP28Skbq8V  # The Script
+1Xyo4u8uXC1ZmMpatF05PJ  # The Weeknd
+3PpJbrAbphauEun8Xf9tD2  # Theodora
+3vUMXQ9kPnZAQkMkZZ7Hfh  # Tiakola
+5Y5TRrQiqgUO4S36tzjIRZ  # Timbaland
+0NIIxcxNHmOoyBx03SfTCD  # Tinashe
+2dLayz7AThHVFmsIbsvTKh  # TINH HÀ "SAY HI"
+5eumcnUkdmGvkvcsx1WFNG  # Tito Double P
+0TImkz4nPqjegtVSMZnMRq  # TLC
+2txHhyCwHjUEpJjWrEyqyX  # Tom Odell
+0PFtn5NtBbbUNbU9EAmIWF  # TOTO
+4NHQUGzhtTLFvgF5SZesLK  # Tove Lo
+1Y5vJqABeI6QI6R95EDV6o  # tuki.
+5QKGejJMncXUNUb9pUFbEf  # TUL8TE
+2iDVt6mFbtbDEZG5ax0dTi  # Tulus
+7c0XG5cIJTrrAgEC3ULPiq  # Ty Dolla $ign
+3SozjO3Lat463tQICI9LcE  # Tyla
+4V8LLVI7PbaPR0K2TGSxFF  # Tyler, The Creator
+1cK2Abwkni7m51wJCSGllN  # Ultra Naté
+3RM6NEfGA58GBtXSUs3G5l  # Uncle Dags
+51DevdOxIJin6DB1FXJpD1  # UZI
+3JsHnjpbhX4SnySpvpa9DK  # V
+10exVja0key0uqUkk6LJRT  # Vance Joy
+2IUl3m1H1EQ7QfNbNWvgru  # Vaundy
+4YqwRbMLqGHRHLS1w2ZKse  # Veigh
+6RJXSfbIkEMoCJ8GAg2dVO  # Victor Leksell
+5YqI7p8zYsOpKJtjxYdOce  # Victor Mendivil
+57g2v7gJZepcwsuwssIfZs  # Vũ.
+5uwa6tAMMfNbBFIHiI6NV4  # W Sound
+3YBJLs7RqR0aPGBgU27nDh  # Werenoi
+5jfz7uWPwf03hdEewW8AI8  # Wet Bed Gang
+5lpH0xAS4fVfLkACg9DAuM  # Wham!
+4mYFgEjpQT4IKOrjOUKyXu  # Wheatus
+26opZSJcXshCmCwxgZQmBc  # Whiskey Myers
+1wZtkThiXbVNtj6hee6dz9  # Wisin & Yandel
+137W8MRPWKqSmrBGDBFSop  # Wiz Khalifa
+3tVQdUvClmAT7URs9V3rsp  # Wizkid
+7aBzpmFXB4WWpPl2F7RjBe  # Wyclef Jean
+3EumQuYai5g1235jIBaPhA  # Ya Ice Dilan
+2YkP9pfIZ6hJKeuppuz8qT  # Yade Lauren
+51ZSh80McCt7vbqHouzW0A  # Yahritza Y Su Esencia
+6TKygPpVT29oGUogu4J9Ec  # Yan Block
+4tgNxPUJKyOY0VkbzJ44iE  # Yk It’s Junaa
+4eq1q0o9XPyNq9RG3fNDD1  # Yorghaki
+4UK2Lzi6fBfUi9rpDt6cik  # Yorushika
+0Yg29FX1M4ayqjXs0ttZFq  # Young Cister
+6WQFTzqYHmh8Ph2X0L0QLQ  # Young Stunna
+0AvGycOEDZTaBFLCaiGd9S  # YOUNGOHM
+1rTUwYS38LkQTlT2fhikch  # Yung Beef
+67lytN32YpUxiSeWlKfHJ3  # Yung Lean
+0ixzjrK1wkN2zWBXt3VW3W  # Yuuri
+4CuVt3p02OaWu4klQuJoDP  # Z9
+40ZNYROS4zLfyyBSs2PGe2  # Zach Bryan
+0M4wzwZKh9SSHkOXYNvQlP  # Zain Zohaib
+1Xylc3o4UrD53lo9CvFvVg  # Zara Larsson
+487N2T9nIPEHrlTZLL3SQs  # Zé Neto & Cristiano
+5K8Rmjmf4RZFffz94EmBRt  # Zé Vaqueiro
+12vb80Km0Ew53ABfJOepVz  # Ñengo Flow
+42bLvjMTikom8zqIxOgUEY  # حمو المرشدي
