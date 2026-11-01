@@ -18,7 +18,17 @@ from typing import Any, Callable, Dict, List, Mapping, Optional, Sequence
 
 from . import __version__
 from .artists import ArtistList, read_artists
-from .fetch import BATCH_SIZE, FetchBatch, FetchReport, fetch_stats, make_client, requests_needed, resolve_api, sdk_fetcher
+from .fetch import (
+    BATCH_SIZE,
+    FetchBatch,
+    FetchReport,
+    RequestBudget,
+    fetch_stats,
+    make_client,
+    requests_needed,
+    resolve_api,
+    sdk_fetcher,
+)
 from .history import (
     Row,
     entries_for_day,
@@ -32,9 +42,13 @@ from .history import (
 )
 from .render import build_latest, cities_from_latest, dump_latest, render_excerpt, render_leaderboard, replace_section
 
-#: Requests per run unless TRACKER_MAX_REQUESTS or --max-requests says otherwise.
-#: 30 a day stays under the free RapidAPI plan's 1,000 a month.
+#: Requests per run, retries included, unless TRACKER_MAX_REQUESTS or --max-requests says
+#: otherwise. 30 a day is at most 930 in a 31-day month: under the free RapidAPI plan's 1,000.
 DEFAULT_MAX_REQUESTS = 30
+
+#: Minutes after which a run starts no new request (--time-limit). daily.yml gives the job
+#: 30 minutes, which leaves room for the last request, the install and the commit.
+DEFAULT_TIME_LIMIT = 20.0
 
 
 class Console:
@@ -104,7 +118,12 @@ def render_outputs(
     *,
     top: int = 100,
 ) -> List[str]:
-    """Write LEADERBOARD.md, data/latest.json and the README excerpt for ``day``. Returns what changed."""
+    """Write LEADERBOARD.md and the README excerpt for ``day``. Returns what changed.
+
+    data/latest.json is written only when ``day`` is the latest day in the history:
+    it also holds the top cities, which history.csv does not keep, so an earlier
+    day must never replace it.
+    """
 
     entries = entries_for_day(rows, day, artist_ids)
     have = {entry.row.artist_id for entry in entries}
@@ -114,9 +133,10 @@ def render_outputs(
     leaderboard = render_leaderboard(entries, day=day, tracked=len(artist_ids), top=top, not_updated=len(not_updated))
     if write_text_if_changed(paths.leaderboard, leaderboard):
         changed.append(paths.leaderboard.name)
-    latest = build_latest(entries, day=day, tracked=len(artist_ids), cities=cities, not_updated=not_updated)
-    if write_text_if_changed(paths.latest, dump_latest(latest)):
-        changed.append("data/" + paths.latest.name)
+    if day == latest_day(rows, artist_ids):
+        latest = build_latest(entries, day=day, tracked=len(artist_ids), cities=cities, not_updated=not_updated)
+        if write_text_if_changed(paths.latest, dump_latest(latest)):
+            changed.append("data/" + paths.latest.name)
     if paths.readme.exists():
         text = paths.readme.read_text(encoding="utf-8")
         updated = replace_section(text, render_excerpt(entries, day=day))
@@ -138,9 +158,14 @@ def record_and_render(
     report: FetchReport,
     console: Console,
     *,
+    history: Sequence[Row],
     top: int = 100,
 ) -> int:
-    """Add a fetch report's numbers to the history for ``day`` and re-render. Returns the exit code."""
+    """Add a fetch report's numbers to ``history`` for ``day``, save it and re-render. Returns the exit code.
+
+    The generated files show the latest day in the history: ``day`` itself, unless
+    an earlier day was recorded with ``--date``.
+    """
 
     if report.missing:
         console.warning(
@@ -150,18 +175,21 @@ def record_and_render(
     if report.stopped:
         console.warning(f"Stopped early: {report.stopped}.")
     if not report.stats:
-        console.error("No artist stats were fetched, so nothing was written.")
+        console.error(f"No artist stats were fetched with {report.requests} request(s), so nothing was written.")
         return 1
     new_rows = rows_for_day(day, (report.stats[i] for i in artist_ids if i in report.stats))
-    rows = upsert(read_history(paths.history), new_rows)
+    rows = upsert(history, new_rows)
     changed = ["data/history.csv"] if write_history(paths.history, rows) else []
-    cities = _stored_cities(paths, day)
-    cities.update({stats.id: stats.top_cities for stats in report.stats.values()})
-    changed += render_outputs(paths, rows, artist_ids, day, cities, top=top)
+    shown = latest_day(rows, artist_ids) or day
+    cities = _stored_cities(paths, shown)
+    if shown == day:
+        cities.update({stats.id: stats.top_cities for stats in report.stats.values()})
+    changed += render_outputs(paths, rows, artist_ids, shown, cities, top=top)
     unknown = set(report.missing)
     failed = [artist_id for artist_id in report.failed if artist_id not in unknown]
     console.info(
         f"Recorded {len(new_rows)} of {len(artist_ids)} artists for {day} with {report.requests} request(s). "
+        + (f"The files show {shown}, the latest day in data/history.csv. " if shown != day else "")
         + (f"Updated: {', '.join(changed)}." if changed else "No file changed.")
     )
     if failed:
@@ -177,22 +205,30 @@ def run_tracker(
     fetch_batch: FetchBatch,
     console: Console,
     *,
-    max_requests: Optional[int] = DEFAULT_MAX_REQUESTS,
+    history: Sequence[Row],
+    budget: Optional[RequestBudget] = None,
     retry_passes: int = 2,
+    time_limit: Optional[float] = None,
     pause: float = 1.0,
     top: int = 100,
 ) -> int:
-    """Fetch, record and render with any ``fetch_batch`` (the SDK one in ``run``)."""
+    """Fetch, record and render with any ``fetch_batch`` (the SDK one in ``run``).
+
+    ``history`` is data/history.csv as read before fetching, so that a broken file
+    stops the run before it spends any request. ``budget`` caps the requests and
+    ``time_limit`` (seconds) the time spent fetching.
+    """
 
     report = fetch_stats(
         artist_ids,
         fetch_batch,
         retry_passes=retry_passes,
-        max_requests=max_requests,
+        budget=budget,
+        time_limit=time_limit,
         pause=pause,
         log=console.info,
     )
-    return record_and_render(paths, artist_ids, day, report, console, top=top)
+    return record_and_render(paths, artist_ids, day, report, console, history=history, top=top)
 
 
 def _max_requests(value: Optional[int], env: Mapping[str, str]) -> int:
@@ -220,6 +256,12 @@ def _day(value: Optional[str]) -> str:
         raise ValueError(f"--date must be YYYY-MM-DD, not {value!r}") from None
 
 
+def _positive(option: str, value: float) -> float:
+    if not value > 0:  # also refuses NaN
+        raise ValueError(f"{option} must be greater than 0")
+    return value
+
+
 def cmd_run(args: argparse.Namespace, env: Mapping[str, str], session: Any, console: Console) -> int:
     paths = Paths.at(Path(args.root), Path(args.artists) if args.artists else None)
     artists = load_artists(paths, console)
@@ -240,6 +282,10 @@ def cmd_run(args: argparse.Namespace, env: Mapping[str, str], session: Any, cons
         provider, _, _ = resolve_api(base)
         max_requests = _max_requests(args.max_requests, env)
         day = _day(args.date)
+        timeout = _positive("--timeout", args.timeout)
+        time_limit = _positive("--time-limit", args.time_limit) * 60
+        # Before the client exists: a broken history file must not cost a single request.
+        history = read_history(paths.history)
     except ValueError as error:
         console.error(str(error))
         return 1
@@ -247,8 +293,8 @@ def cmd_run(args: argparse.Namespace, env: Mapping[str, str], session: Any, cons
     needed = requests_needed(count)
     console.info(
         f"{count} artists: {needed} request(s) of up to {BATCH_SIZE} through "
-        f"{'RapidAPI' if provider == 'rapidapi' else 'the direct API'}, at most {max_requests} this run. "
-        f"Recording {day} (UTC)."
+        f"{'RapidAPI' if provider == 'rapidapi' else 'the direct API'}, at most {max_requests} this run "
+        f"(retries included). Recording {day} (UTC)."
     )
     if needed > max_requests:
         console.warning(
@@ -256,7 +302,8 @@ def cmd_run(args: argparse.Namespace, env: Mapping[str, str], session: Any, cons
             f"{count - max_requests * BATCH_SIZE} artists in the list are skipped. Raise TRACKER_MAX_REQUESTS "
             "if your plan allows more."
         )
-    client = make_client(key, base, timeout=args.timeout, retries=args.retries, session=session)
+    budget = RequestBudget(max_requests)
+    client = make_client(key, base, timeout=timeout, retries=args.retries, budget=budget, session=session)
     try:
         return run_tracker(
             paths,
@@ -264,8 +311,10 @@ def cmd_run(args: argparse.Namespace, env: Mapping[str, str], session: Any, cons
             day,
             sdk_fetcher(client),
             console,
-            max_requests=max_requests,
+            history=history,
+            budget=budget,
             retry_passes=args.retry_passes,
+            time_limit=time_limit,
             pause=args.pause,
             top=args.top,
         )
@@ -278,17 +327,25 @@ def cmd_render(args: argparse.Namespace, console: Console) -> int:
     artists = load_artists(paths, console)
     if artists is None:
         return 1
-    rows = read_history(paths.history)
     try:
-        day = _day(args.date) if args.date else latest_day(rows, artists.ids)
+        rows = read_history(paths.history)
+        latest = latest_day(rows, artists.ids)
+        day = _day(args.date) if args.date else latest
     except ValueError as error:
         console.error(str(error))
         return 1
-    if day is None:
+    if latest is None or day is None:
         console.info("data/history.csv has no rows for these artists yet; nothing to render.")
         return 0
+    if not entries_for_day(rows, day, artists.ids):
+        console.error(f"data/history.csv has no rows for {day}.")
+        return 1
     changed = render_outputs(paths, rows, artists.ids, day, _stored_cities(paths, day), top=args.top)
-    console.info(f"Rendered {day}. " + (f"Updated: {', '.join(changed)}." if changed else "No file changed."))
+    console.info(
+        f"Rendered {day}. "
+        + (f"Updated: {', '.join(changed)}." if changed else "No file changed.")
+        + (f" data/latest.json stays on {latest}, the latest day." if day != latest else "")
+    )
     return 0
 
 
@@ -333,13 +390,30 @@ def build_parser() -> argparse.ArgumentParser:
     run = commands.add_parser("run", parents=[common], help="fetch today's numbers and update the files")
     run.add_argument("--date", help="UTC day to record, YYYY-MM-DD (default: today)")
     run.add_argument(
-        "--max-requests", type=int, help=f"requests this run may send (default: TRACKER_MAX_REQUESTS or {DEFAULT_MAX_REQUESTS})"
+        "--max-requests",
+        type=int,
+        help=f"requests this run may send, retries included (default: TRACKER_MAX_REQUESTS or {DEFAULT_MAX_REQUESTS})",
     )
     run.add_argument(
-        "--retry-passes", type=int, default=2, help="extra passes for artists whose stats were not ready (default: 2)"
+        "--retry-passes",
+        type=int,
+        default=2,
+        help="extra passes for artists whose stats were not ready or whose request failed (default: 2)",
     )
-    run.add_argument("--retries", type=int, default=2, help="SDK retries of a request that failed with 429/5xx (default: 2)")
+    run.add_argument(
+        "--retries",
+        type=int,
+        default=0,
+        help="SDK retries of a request that failed with 429/5xx or a network error, each counted towards "
+        "--max-requests (default: 0; the next pass asks for those artists again)",
+    )
     run.add_argument("--timeout", type=float, default=90.0, help="seconds to wait for one response (default: 90)")
+    run.add_argument(
+        "--time-limit",
+        type=float,
+        default=DEFAULT_TIME_LIMIT,
+        help=f"minutes after which no new request is started (default: {DEFAULT_TIME_LIMIT:g})",
+    )
     run.add_argument("--pause", type=float, default=1.0, help="seconds between requests (default: 1)")
 
     render = commands.add_parser("render", parents=[common], help="rewrite the generated files from data/history.csv")

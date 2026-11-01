@@ -126,10 +126,56 @@ def test_the_request_limit_comes_from_the_environment(repo):
     assert "this run may send 1" in output and "limit of 1 requests" in output
 
 
-@pytest.mark.parametrize("env", [{"SPOTIFY_API_BASE": "not a url"}, {"TRACKER_MAX_REQUESTS": "many"}])
-def test_bad_settings_fail_fast(repo, env):
+def test_an_outage_spends_few_requests_and_writes_nothing(repo):
+    session = FakeSession(status=503, error_body={"message": "Service unavailable"})
+    code, output = run(repo, session=session)
+    assert code == 1
+    assert len(session.requests) == 3  # 2 in the first pass, 1 to check in the next
+    assert "No artist stats were fetched with 3 request(s), so nothing was written." in output
+    assert not (repo / "data").exists()
+
+
+def test_sdk_retries_are_counted_as_requests(repo, no_sdk_wait):
+    session = FakeSession(status=503, error_body={"message": "Service unavailable"})
+    code, output = run(repo, "--retries", "2", session=session)
+    assert code == 1
+    assert len(session.requests) == 9  # 3 requests, each sent 3 times
+    assert "with 9 request(s)" in output
+
+
+def test_sdk_retries_never_go_past_the_request_limit(repo, no_sdk_wait):
+    session = FakeSession(status=503, error_body={"message": "Service unavailable"})
+    env = {"SPOTIFY_API_KEY": KEY, "TRACKER_MAX_REQUESTS": "5"}
+    code, output = run(repo, "--retries", "2", env=env, session=session)
+    assert code == 1
+    assert len(session.requests) == 5
+    assert "Stopped early: the limit of 5 requests per run was reached." in output
+
+
+def test_a_broken_history_stops_the_run_before_any_request(repo):
+    (repo / "data").mkdir()
+    (repo / "data" / "history.csv").write_text(
+        f"date,artist_id,name,monthly_listeners,followers,world_rank\n2026-11-01,{TAYLOR},Taylor Swift,lots,1,\n",
+        encoding="utf-8",
+    )
     session = FakeSession(FakeApi(universe()))
-    code, output = run(repo, env={"SPOTIFY_API_KEY": KEY, **env}, session=session)
+    code, output = run(repo, session=session)
+    assert code == 1 and session.requests == []
+    assert "history.csv line 2: monthly_listeners is not a whole number" in output
+
+
+@pytest.mark.parametrize(
+    "env, args",
+    [
+        ({"SPOTIFY_API_BASE": "not a url"}, []),
+        ({"TRACKER_MAX_REQUESTS": "many"}, []),
+        ({}, ["--time-limit", "0"]),
+        ({}, ["--timeout", "-5"]),
+    ],
+)
+def test_bad_settings_fail_fast(repo, env, args):
+    session = FakeSession(FakeApi(universe()))
+    code, output = run(repo, *args, env={"SPOTIFY_API_KEY": KEY, **env}, session=session)
     assert code == 1 and session.requests == []
 
 
@@ -142,6 +188,44 @@ def test_render_rebuilds_the_same_files(repo):
     assert main(["render", "--root", str(repo)], env={}, write=lines.append) == 0
     assert leaderboard.read_bytes() == before
     assert "Rendered 2026-11-01" in lines[-1]
+
+
+def render(repo, *args):
+    lines = []
+    code = main(["render", "--root", str(repo), *args], env={}, write=lines.append)
+    return code, "\n".join(lines)
+
+
+def test_latest_json_stays_on_the_latest_day(repo):
+    run(repo, "--date", "2026-11-01", session=FakeSession(FakeApi(universe())))
+    run(repo, "--date", "2026-11-02", session=FakeSession(FakeApi(universe(bump=500))))
+    latest = repo / "data" / "latest.json"
+    leaderboard = repo / "LEADERBOARD.md"
+    before = latest.read_bytes()
+    assert json.loads(before)["artists"][0]["top_cities"]
+
+    code, output = render(repo, "--date", "2026-11-01")
+    assert code == 0 and "data/latest.json stays on 2026-11-02, the latest day." in output
+    assert "**2026-11-01**" in leaderboard.read_text(encoding="utf-8")
+    assert latest.read_bytes() == before
+
+    code, output = render(repo)
+    assert code == 0 and "Rendered 2026-11-02" in output
+    assert "**2026-11-02**" in leaderboard.read_text(encoding="utf-8")
+    assert latest.read_bytes() == before  # top cities included
+
+    # Recording an earlier day keeps the files on the latest one.
+    code, output = run(repo, "--date", "2026-11-01", session=FakeSession(FakeApi(universe(bump=100))))
+    assert code == 0 and "The files show 2026-11-02, the latest day in data/history.csv." in output
+    document = json.loads(latest.read_text(encoding="utf-8"))
+    assert document["date"] == "2026-11-02" and document["artists"][0]["top_cities"]
+    assert document["artists"][0]["change_1d"] == 400  # against the new 2026-11-01 value
+
+
+def test_render_refuses_a_day_without_rows(repo):
+    run(repo, "--date", "2026-11-01", session=FakeSession(FakeApi(universe())))
+    code, output = render(repo, "--date", "2026-10-15")
+    assert code == 1 and "data/history.csv has no rows for 2026-10-15." in output
 
 
 def test_check(repo):

@@ -48,12 +48,20 @@ class FakeApi:
     """Answers GET /artists for a set of known artists.
 
     ``slow`` ids come back with ``stats: null`` the first time they are asked for,
-    ``missing`` ids are reported as unknown to Spotify.
+    ``never_ready`` ids every time, and ``missing`` ids are reported as unknown to Spotify.
     """
 
-    def __init__(self, artists: Iterable[Dict[str, Any]], *, slow: Iterable[str] = (), missing: Iterable[str] = ()) -> None:
+    def __init__(
+        self,
+        artists: Iterable[Dict[str, Any]],
+        *,
+        slow: Iterable[str] = (),
+        never_ready: Iterable[str] = (),
+        missing: Iterable[str] = (),
+    ) -> None:
         self.artists = {artist["id"]: artist for artist in artists}
         self.slow = set(slow)
+        self.never_ready = set(never_ready)
         self.missing = set(missing)
         self.calls: List[List[str]] = []
 
@@ -64,7 +72,7 @@ class FakeApi:
             if artist_id in self.missing or artist_id not in self.artists:
                 continue
             artist = json.loads(json.dumps(self.artists[artist_id]))
-            if artist_id in self.slow:
+            if artist_id in self.slow or artist_id in self.never_ready:
                 self.slow.discard(artist_id)
                 artist["stats"] = None
             out.append(artist)

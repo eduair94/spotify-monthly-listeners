@@ -7,6 +7,8 @@ from tracker.fetch import (
     DIRECT_BASE,
     BatchRejected,
     FatalFetchError,
+    RequestBudget,
+    RequestLimitReached,
     batched,
     fetch_stats,
     make_client,
@@ -106,19 +108,52 @@ def test_retries_only_the_artists_without_stats():
 
 def test_gives_up_after_the_retry_passes():
     ids = [fake_id(i) for i in range(3)]
-
-    class NeverReady(FakeApi):
-        def answer(self, batch):
-            body = super().answer(batch)
-            for artist in body["artists"]:
-                if artist["id"] == ids[1]:
-                    artist["stats"] = None
-            return body
-
-    api = NeverReady(_universe(3))
+    api = FakeApi(_universe(3), never_ready={ids[1]})
     report = fetch_stats(ids, api, retry_passes=2, pause=0, log=lambda _: None)
     assert report.failed == [ids[1]]
     assert len(api.calls) == 3  # first pass + 2 retry passes
+
+
+def test_after_a_pass_without_stats_the_next_pass_checks_with_one_request():
+    ids = [fake_id(i) for i in range(150)]
+    api = FakeApi(_universe(150), never_ready=ids[50:])
+    logged = []
+    report = fetch_stats(ids, api, retry_passes=5, pause=0, log=logged.append)
+    assert len(report.stats) == 50 and report.failed == ids[50:]
+    # first pass: 3 requests; retry pass 1 gets nothing from 2; retry pass 2 stops after 1
+    assert [len(call) for call in api.calls] == [50] * 6
+    assert any(line.startswith("Retry pass 2: 100 artist(s) still without stats. The last pass got none") for line in logged)
+    assert logged[-1] == "Still no stats, so the 100 artist(s) left are not asked for again this run."
+
+
+def test_an_outage_costs_one_pass_and_one_more_request():
+    ids = [fake_id(i) for i in range(500)]
+    sent = []
+
+    def fetch(batch):
+        sent.append(batch)
+        raise ConnectionError("connection refused")
+
+    report = fetch_stats(ids, fetch, retry_passes=2, pause=0, log=lambda _: None)
+    assert len(sent) == 11 and report.requests == 11  # 10 in the first pass, then 1 to check
+    assert report.stats == {} and report.stopped is None
+    assert report.failed == ids
+
+
+def test_the_next_pass_goes_on_when_the_api_is_back():
+    ids = [fake_id(i) for i in range(120)]
+    api = FakeApi(_universe(120))
+    sent = []
+
+    def fetch(batch):
+        sent.append(batch)
+        if len(sent) <= 3:  # down for the whole first pass
+            raise ConnectionError("connection refused")
+        return api(batch)
+
+    report = fetch_stats(ids, fetch, pause=0, log=lambda _: None)
+    assert set(report.stats) == set(ids) and report.failed == []
+    assert len(sent) == 6 and report.requests == 6
 
 
 def test_unknown_artists_are_not_retried():
@@ -133,7 +168,7 @@ def test_unknown_artists_are_not_retried():
 def test_stops_at_the_request_limit():
     ids = [fake_id(i) for i in range(120)]
     api = FakeApi(_universe(120))
-    report = fetch_stats(ids, api, max_requests=2, pause=0, log=lambda _: None)
+    report = fetch_stats(ids, api, budget=RequestBudget(2), pause=0, log=lambda _: None)
     assert len(api.calls) == 2 and report.requests == 2
     assert len(report.stats) == 100
     assert report.failed == ids[100:]
@@ -143,9 +178,40 @@ def test_stops_at_the_request_limit():
 def test_retry_passes_count_towards_the_limit():
     ids = [fake_id(i) for i in range(60)]
     api = FakeApi(_universe(60), slow={ids[0]})
-    report = fetch_stats(ids, api, max_requests=2, pause=0, log=lambda _: None)
+    report = fetch_stats(ids, api, budget=RequestBudget(2), pause=0, log=lambda _: None)
     assert len(api.calls) == 2
     assert report.failed == [ids[0]]
+
+
+def test_the_request_budget():
+    with pytest.raises(ValueError):
+        RequestBudget(0)
+    budget = RequestBudget(2)
+    budget.spend()
+    budget.spend({"attempt": 1})  # also the SDK's on_retry hook
+    assert budget.sent == 2 and budget.used_up
+    with pytest.raises(RequestLimitReached, match="limit of 2 requests"):
+        budget.spend()
+    assert budget.sent == 2
+    unlimited = RequestBudget()
+    for _ in range(1000):
+        unlimited.spend()
+    assert not unlimited.used_up
+
+
+def test_stops_starting_requests_at_the_time_limit():
+    ids = [fake_id(i) for i in range(150)]
+    api = FakeApi(_universe(150))
+    now = [0.0]
+
+    def fetch(batch):
+        now[0] += 50  # every request takes 50 seconds
+        return api(batch)
+
+    report = fetch_stats(ids, fetch, time_limit=90, pause=0, log=lambda _: None, clock=lambda: now[0])
+    assert len(api.calls) == 2  # started at 0 and 50 s; at 100 s the limit had passed
+    assert len(report.stats) == 100 and report.failed == ids[100:]
+    assert report.stopped == "the time limit of 1.5 minutes per run was reached"
 
 
 def test_a_fatal_error_stops_and_keeps_what_was_fetched():
@@ -178,7 +244,8 @@ def test_a_failed_request_is_asked_again_in_the_next_pass():
     report = fetch_stats(ids, fetch, pause=0, log=logged.append)
     assert set(report.stats) == set(ids)
     assert report.requests == 2
-    assert any("will ask again" in line for line in logged)
+    assert logged[0] == "Request 1 (10 artists): failed (ConnectionError: reset by peer)"
+    assert logged[-1] == "Request 2 (10 artists): stats for 10"
 
 
 def test_a_refused_batch_is_not_sent_again():
@@ -268,7 +335,23 @@ def test_a_server_error_is_left_for_the_retry_pass():
     from spotify_api_sdk import HttpError
 
     session = FakeSession(status=500, error_body={"message": "boom"})
-    fetch = sdk_fetcher(make_client("k", None, session=session, retries=0))
+    fetch = sdk_fetcher(make_client("k", None, session=session))
     with pytest.raises(HttpError) as raised:
         fetch([TAYLOR])
     assert not isinstance(raised.value, (FatalFetchError, BatchRejected))
+    assert len(session.requests) == 1  # no automatic retries unless asked for
+
+
+def test_sdk_retries_count_towards_the_request_limit(no_sdk_wait):
+    ids = [fake_id(i) for i in range(120)]
+    session = FakeSession(status=503, error_body={"message": "Service unavailable"})
+    budget = RequestBudget(4)
+    fetch = sdk_fetcher(make_client("k", None, session=session, retries=2, budget=budget))
+    logged = []
+    report = fetch_stats(ids, fetch, budget=budget, pause=0, log=logged.append)
+    assert len(session.requests) == 4 and report.requests == 4 and budget.sent == 4
+    assert report.stopped == "the limit of 4 requests per run was reached"
+    assert report.failed == ids
+    assert logged[0].startswith("Request 1 (50 artists, 2 automatic retries): failed (HTTP 503")
+    # request 4 failed too, and its retry would have been the 5th request: it is not sent
+    assert logged[1] == "Request 4 (50 artists): the limit of 4 requests per run was reached"
