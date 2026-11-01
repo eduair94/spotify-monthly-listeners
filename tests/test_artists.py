@@ -57,8 +57,9 @@ def test_reads_utf8_with_bom_and_crlf(tmp_path):
     assert read_artists(path).ids == [TAYLOR, WEEKND]
 
 
-def test_repository_artist_list_is_clean():
+def test_repository_artist_list_reads_without_errors():
+    # The same rule as `python -m tracker check`: a fork can track any number of artists,
+    # and a repeated artist is only a warning.
     result = read_artists(ROOT / "artists.txt")
     assert result.errors == []
-    assert result.warnings == []
-    assert 400 <= len(result.ids) <= 600
+    assert result.ids
