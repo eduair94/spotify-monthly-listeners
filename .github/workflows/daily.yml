@@ -1,4 +1,5 @@
 name: Daily update
+# Runs the tracker once a day and commits data/ and LEADERBOARD.md back to main.
 
 on:
   schedule:
