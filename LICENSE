@@ -19,16 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
--------------------------------------------------------------------------------
-
-Data notice
-
-The MIT License above covers the code. The data in data/, LEADERBOARD.md and the
-generated tables in README.md comes from public Spotify artist pages, collected
-through the Spotify Data API (https://spotify.checkleaked.cc). It is provided
-"as is", without warranty of any kind, including its accuracy, completeness or
-fitness for any purpose.
-
-This project is unofficial. It is not affiliated with, endorsed by or sponsored
-by Spotify. Spotify is a trademark of Spotify AB.

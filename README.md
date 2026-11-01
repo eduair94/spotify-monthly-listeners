@@ -99,7 +99,7 @@ The workflow then commits new numbers once a day. Without the secret it skips th
 why in its log, so a fork without a key does not fail.
 
 Optional: a repository *variable* `TRACKER_MAX_REQUESTS` (Settings → Secrets and variables →
-Actions → Variables) sets the most requests one run may send. The default is 30.
+Actions → Variables) sets the most requests one run may send, retries included. The default is 30.
 
 ### Getting an API key
 
@@ -107,20 +107,28 @@ The tracker uses the [Spotify Data API](https://spotify.checkleaked.cc), which r
 from public artist pages. You need a key from one of these:
 
 - **RapidAPI** ([spotify81 on RapidAPI](https://rapidapi.com/airaudoeduardo/api/spotify81)). The
-  free Basic plan allows 1,000 requests a month, as a hard limit. One request returns up to 50
-  artists, so 1,000 requests a month is about 33 a day, enough for about 1,650 artists a day.
+  free Basic plan allows 1,000 requests a month, as a hard limit: requests past it are refused,
+  not charged. RapidAPI asks for a payment card even to subscribe to the free plan, because the
+  API also has paid plans ([RapidAPI's pricing rules](https://docs.rapidapi.com/docs/api-pricing)).
 - **A direct key** from [spotify.checkleaked.cc/pricing](https://spotify.checkleaked.cc/pricing).
   Set `SPOTIFY_API_BASE` as described above.
+
+One request returns up to 50 artists. A run sends at most 30 requests by default, retries
+included, so one run a day stays at or under 930 requests in a 31-day month: inside the free
+plan, with room for an occasional run started by hand. 30 requests cover 1,500 artists when every
+answer is complete; keep your list to about 1,400 artists so that each run has two requests left
+for asking again about artists whose numbers were not ready.
 
 | Artists in `artists.txt` | Requests a day | Requests a month (31 days) |
 | --: | --: | --: |
 | 50 | 1 | 31 |
 | 500 (this list) | 10 | 310 |
 | 1,000 | 20 | 620 |
+| 1,400 | 28 | 868 |
 | 1,500 | 30 | 930 |
 
-Add a few requests a day for retries: artists whose numbers were not ready in time are asked for
-again, 50 per request. `python -m tracker check` prints the count for your list.
+The table counts one request per 50 artists. Asking again takes one more request per 50 artists
+whose numbers were not ready. `python -m tracker check` prints the count for your list.
 
 ## Run it on your computer
 
@@ -135,19 +143,22 @@ python -m pip install -r requirements-dev.txt
 python -m pytest                         # offline tests, no key needed
 ```
 
-`python -m tracker run --help` lists the options (request limit, retry passes, timeout, date).
-Python 3.9 or newer.
+`python -m tracker run --help` lists the options (request limit, retry passes, SDK retries,
+timeouts, date). Python 3.9 or newer.
 
 ## How it works
 
 For each group of 50 artists the tracker sends one request, `GET /artists?ids=<ids>&include=stats`,
 through the [checkleaked-spotify-api](https://pypi.org/project/checkleaked-spotify-api/) Python
 SDK. The answer has each artist's followers, monthly listeners, world rank and top cities.
-Artists whose numbers were not ready in time are asked for again, in up to two more passes, and
-ids that Spotify does not know are reported so you can remove them. The day's rows are then
-merged into `data/history.csv`: running again on the same day replaces that day's rows instead
-of adding duplicates. Finally `LEADERBOARD.md`, `data/latest.json` and the table at the top of
-this file are regenerated.
+Artists whose numbers were not ready in time, and those of a request that failed, are asked for
+again in up to two more passes. If a whole pass gets no numbers at all, for example while the API
+is down, the next pass sends one request and goes on only if that one gets numbers, so an outage
+costs one request per 50 artists, plus one. Every request counts towards the run's limit, and no
+new request starts after 20 minutes. Ids that Spotify does not know are reported so you can
+remove them. The day's rows are then merged into `data/history.csv`: running again on the same
+day replaces that day's rows instead of adding duplicates. Finally `LEADERBOARD.md`,
+`data/latest.json` and the table at the top of this file are regenerated.
 
 You can get the same numbers for any artist from the API directly. The
 [Spotify monthly listeners API guide](https://spotify.checkleaked.cc/spotify-monthly-listeners-api)
@@ -159,7 +170,8 @@ from spotify_api_sdk import SpotifyApiClient
 client = SpotifyApiClient(api_key="your-rapidapi-key")
 body = client.artists.get(["06HL4z0CvFAxyc27GXpf02", "1Xyo4u8uXC1ZmMpatF05PJ"], include=["stats"])
 for artist in body["artists"]:
-    print(artist["name"], artist["stats"]["monthly_listeners"])
+    # stats is null when the numbers were not ready in time
+    print(artist["name"], (artist.get("stats") or {}).get("monthly_listeners"))
 ```
 
 ## How the 500 artists were picked
@@ -191,5 +203,5 @@ ranks the tracked artists only; it is not a ranking of all artists on Spotify.
 
 The code is MIT licensed; see [LICENSE](LICENSE). The data comes from public Spotify artist
 pages, collected through the API, and is provided as is, without any guarantee of accuracy or
-completeness. This project is unofficial and is not affiliated with, endorsed by or sponsored by
-Spotify. Spotify is a trademark of Spotify AB.
+completeness; see [DATA_NOTICE.md](DATA_NOTICE.md). This project is unofficial and is not
+affiliated with, endorsed by or sponsored by Spotify. Spotify is a trademark of Spotify AB.
