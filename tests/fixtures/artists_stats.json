@@ -1,0 +1,212 @@
+{
+  "artists": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+      },
+      "followers": {
+        "href": null,
+        "total": 166079303
+      },
+      "genres": [],
+      "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+      "id": "06HL4z0CvFAxyc27GXpf02",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb12184bdd29403de54cb9d9c7",
+          "height": 640,
+          "width": 640
+        }
+      ],
+      "name": "Taylor Swift",
+      "popularity": 98,
+      "type": "artist",
+      "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02",
+      "stats": {
+        "followers": 166079303,
+        "monthly_listeners": 100388733,
+        "world_rank": 6,
+        "top_cities": [
+          {
+            "city": "London",
+            "country": "GB",
+            "region": "ENG",
+            "listeners": 1525725
+          },
+          {
+            "city": "Quezon City",
+            "country": "PH",
+            "region": "00",
+            "listeners": 1373643
+          },
+          {
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK",
+            "listeners": 1158262
+          },
+          {
+            "city": "Sydney",
+            "country": "AU",
+            "region": "NSW",
+            "listeners": 1088778
+          },
+          {
+            "city": "Mexico City",
+            "country": "MX",
+            "region": "CMX",
+            "listeners": 993770
+          }
+        ]
+      }
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ"
+      },
+      "followers": {
+        "href": null,
+        "total": 129632964
+      },
+      "genres": [],
+      "href": "https://api.spotify.com/v1/artists/1Xyo4u8uXC1ZmMpatF05PJ",
+      "id": "1Xyo4u8uXC1ZmMpatF05PJ",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5ebc1719ac9e6a75c1c25835018",
+          "height": 640,
+          "width": 640
+        }
+      ],
+      "name": "The Weeknd",
+      "popularity": 96,
+      "type": "artist",
+      "uri": "spotify:artist:1Xyo4u8uXC1ZmMpatF05PJ",
+      "stats": {
+        "followers": 129632964,
+        "monthly_listeners": 116457297,
+        "world_rank": 3,
+        "top_cities": [
+          {
+            "city": "Mexico City",
+            "country": "MX",
+            "region": "CMX",
+            "listeners": 1645614
+          },
+          {
+            "city": "London",
+            "country": "GB",
+            "region": "ENG",
+            "listeners": 1489446
+          },
+          {
+            "city": "São Paulo",
+            "country": "BR",
+            "region": "SP",
+            "listeners": 1393878
+          },
+          {
+            "city": "Los Angeles",
+            "country": "US",
+            "region": "CA",
+            "listeners": 1084296
+          },
+          {
+            "city": "Sydney",
+            "country": "AU",
+            "region": "NSW",
+            "listeners": 978781
+          }
+        ]
+      }
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X"
+      },
+      "followers": {
+        "href": null,
+        "total": 125769369
+      },
+      "genres": [],
+      "href": "https://api.spotify.com/v1/artists/4q3ewBCX7sLwd24euuV69X",
+      "id": "4q3ewBCX7sLwd24euuV69X",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb81f47f44084e0a09b5f0fa13",
+          "height": 640,
+          "width": 640
+        }
+      ],
+      "name": "Bad Bunny",
+      "popularity": 98,
+      "type": "artist",
+      "uri": "spotify:artist:4q3ewBCX7sLwd24euuV69X",
+      "stats": {
+        "followers": 125769369,
+        "monthly_listeners": 90118373,
+        "world_rank": 10,
+        "top_cities": [
+          {
+            "city": "Mexico City",
+            "country": "MX",
+            "region": "CMX",
+            "listeners": 4235102
+          },
+          {
+            "city": "Santiago",
+            "country": "CL",
+            "region": "RM",
+            "listeners": 2614958
+          },
+          {
+            "city": "Bogotá",
+            "country": "CO",
+            "region": "DC",
+            "listeners": 2521017
+          },
+          {
+            "city": "Lima",
+            "country": "PE",
+            "region": "LMA",
+            "listeners": 2074651
+          },
+          {
+            "city": "Buenos Aires",
+            "country": "AR",
+            "region": "C",
+            "listeners": 1718722
+          }
+        ]
+      }
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0du5cEVh5yTK9QJze8zA0C"
+      },
+      "followers": {
+        "href": null,
+        "total": null
+      },
+      "genres": [],
+      "href": "https://api.spotify.com/v1/artists/0du5cEVh5yTK9QJze8zA0C",
+      "id": "0du5cEVh5yTK9QJze8zA0C",
+      "images": [],
+      "name": "Bruno Mars",
+      "popularity": 95,
+      "type": "artist",
+      "uri": "spotify:artist:0du5cEVh5yTK9QJze8zA0C",
+      "stats": null
+    }
+  ],
+  "missing": [
+    "0000000000000000000000"
+  ],
+  "unavailable": [],
+  "include_status": {
+    "stats": {
+      "requested": 4,
+      "resolved": 3
+    }
+  }
+}
