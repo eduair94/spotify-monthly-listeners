@@ -1,0 +1,72 @@
+name: Daily update
+
+on:
+  schedule:
+    # Once a day. GitHub may start scheduled runs some minutes late.
+    - cron: "17 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  key:
+    name: Look for the API key
+    runs-on: ubuntu-latest
+    outputs:
+      present: ${{ steps.check.outputs.present }}
+    steps:
+      - id: check
+        env:
+          SPOTIFY_API_KEY: ${{ secrets.SPOTIFY_API_KEY }}
+        run: |
+          if [ -n "$SPOTIFY_API_KEY" ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "::notice title=Daily update skipped::The SPOTIFY_API_KEY repository secret is not set, so there is nothing to fetch. Add it under Settings > Secrets and variables > Actions (see README.md); the next run will then record data."
+          fi
+
+  update:
+    name: Fetch, record and render
+    needs: key
+    if: needs.key.outputs.present == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install
+        run: python -m pip install -r requirements.txt
+
+      - name: Fetch today's numbers
+        env:
+          SPOTIFY_API_KEY: ${{ secrets.SPOTIFY_API_KEY }}
+          SPOTIFY_API_BASE: ${{ secrets.SPOTIFY_API_BASE }}
+          TRACKER_MAX_REQUESTS: ${{ vars.TRACKER_MAX_REQUESTS }}
+        run: python -m tracker run
+
+      - name: Commit the new data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data LEADERBOARD.md README.md
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git commit -m "data: $(date -u +%Y-%m-%d) snapshot"
+          git pull --rebase
+          git push
