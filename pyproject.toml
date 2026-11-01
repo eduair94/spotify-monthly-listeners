@@ -1,0 +1,9 @@
+# Settings for the tools only: the tracker runs with `python -m tracker`, it is not installed.
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 130
+target-version = "py39"
