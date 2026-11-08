@@ -13,20 +13,20 @@ Unofficial: not affiliated with, endorsed by or sponsored by Spotify.
 ## Top 10 today
 
 <!-- leaderboard:start -->
-Top 10 of the tracked artists on **2026-11-07** (UTC). Full top 100 with 1-day changes: [LEADERBOARD.md](LEADERBOARD.md).
+Top 10 of the tracked artists on **2026-11-08** (UTC). Full top 100 with 1-day changes: [LEADERBOARD.md](LEADERBOARD.md).
 
 | # | Artist | Monthly listeners | 7-day change |
 |--:|:--|--:|--:|
-| 1 | [Bruno Mars](https://open.spotify.com/artist/0du5cEVh5yTK9QJze8zA0C) | 125,864,032 | — |
-| 2 | [Rihanna](https://open.spotify.com/artist/5pKCCKE2ajJHZ9KAiaK11H) | 117,523,183 | — |
-| 3 | [The Weeknd](https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ) | 116,976,918 | — |
-| 4 | [Justin Bieber](https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s) | 110,803,914 | — |
-| 5 | [Lady Gaga](https://open.spotify.com/artist/1HY2Jd0NmPuamShAr6KMms) | 103,962,231 | — |
-| 6 | [Taylor Swift](https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02) | 98,546,561 | — |
-| 7 | [Drake](https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4) | 93,769,860 | — |
-| 8 | [Ariana Grande](https://open.spotify.com/artist/66CXWjxzNUsdJxJ2JdwvnR) | 92,856,643 | — |
-| 9 | [Michael Jackson](https://open.spotify.com/artist/3fMbdgg4jU18AjLCKBhRSm) | 91,991,639 | — |
-| 10 | [Coldplay](https://open.spotify.com/artist/4gzpq5DPGxSnKTe4SA8HAU) | 90,520,522 | — |
+| 1 | [Bruno Mars](https://open.spotify.com/artist/0du5cEVh5yTK9QJze8zA0C) | 125,480,040 | -1,419,458 (-1.12%) |
+| 2 | [Rihanna](https://open.spotify.com/artist/5pKCCKE2ajJHZ9KAiaK11H) | 117,315,212 | -87,156 (-0.07%) |
+| 3 | [The Weeknd](https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ) | 117,075,661 | +618,364 (+0.53%) |
+| 4 | [Justin Bieber](https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s) | 110,855,999 | -41,693 (-0.04%) |
+| 5 | [Lady Gaga](https://open.spotify.com/artist/1HY2Jd0NmPuamShAr6KMms) | 103,779,316 | +1,850,641 (+1.82%) |
+| 6 | [Taylor Swift](https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02) | 98,169,810 | -2,218,923 (-2.21%) |
+| 7 | [Drake](https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4) | 93,787,792 | -931,607 (-0.98%) |
+| 8 | [Ariana Grande](https://open.spotify.com/artist/66CXWjxzNUsdJxJ2JdwvnR) | 92,927,864 | +499,973 (+0.54%) |
+| 9 | [Michael Jackson](https://open.spotify.com/artist/3fMbdgg4jU18AjLCKBhRSm) | 91,753,327 | +2,996,124 (+3.38%) |
+| 10 | [Coldplay](https://open.spotify.com/artist/4gzpq5DPGxSnKTe4SA8HAU) | 90,362,314 | -1,161,184 (-1.27%) |
 <!-- leaderboard:end -->
 
 ## What is in this repository
