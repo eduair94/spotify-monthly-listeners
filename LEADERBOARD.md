@@ -1,6 +1,6 @@
 # Spotify monthly listeners leaderboard
 
-The 100 artists with the most Spotify monthly listeners on **2026-11-25** (UTC), out of the 500 artists in [`artists.txt`](artists.txt). Updated once a day.
+The 100 artists with the most Spotify monthly listeners on **2026-11-26** (UTC), out of the 500 artists in [`artists.txt`](artists.txt). Updated once a day.
 
 Changes compare an artist's monthly listeners with the same artist's value 1 and 7 days earlier; — means there is no earlier value yet. World rank is Spotify's own global rank, which Spotify shows only for its most-listened artists (— for the others).
 
@@ -8,106 +8,106 @@ Changes compare an artist's monthly listeners with the same artist's value 1 and
 
 | # | Artist | Monthly listeners | 1-day change | 7-day change | Followers | World rank |
 |--:|:--|--:|--:|--:|--:|--:|
-| 1 | [Bruno Mars](https://open.spotify.com/artist/0du5cEVh5yTK9QJze8zA0C) | 122,910,378 | +58,818 (+0.05%) | -390,334 (-0.32%) | 91,081,511 | 1 |
-| 2 | [The Weeknd](https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ) | 117,497,519 | +119,358 (+0.10%) | +513,946 (+0.44%) | 130,627,126 | 2 |
-| 3 | [Rihanna](https://open.spotify.com/artist/5pKCCKE2ajJHZ9KAiaK11H) | 116,279,824 | -98,568 (-0.08%) | -230,391 (-0.20%) | 78,205,965 | 3 |
-| 4 | [Justin Bieber](https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s) | 114,313,428 | +330,423 (+0.29%) | +2,387,935 (+2.13%) | 98,324,176 | 4 |
-| 5 | [Lady Gaga](https://open.spotify.com/artist/1HY2Jd0NmPuamShAr6KMms) | 100,470,763 | -163,868 (-0.16%) | -1,357,051 (-1.33%) | 49,681,403 | 5 |
-| 6 | [Ariana Grande](https://open.spotify.com/artist/66CXWjxzNUsdJxJ2JdwvnR) | 98,754,031 | +436,123 (+0.44%) | +3,359,850 (+3.52%) | 116,754,992 | 6 |
-| 7 | [Taylor Swift](https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02) | 96,093,728 | -41,100 (-0.04%) | -440,831 (-0.46%) | 167,044,571 | 7 |
-| 8 | [Drake](https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4) | 93,931,909 | -29,392 (-0.03%) | -70,956 (-0.08%) | 119,936,664 | 8 |
-| 9 | [Coldplay](https://open.spotify.com/artist/4gzpq5DPGxSnKTe4SA8HAU) | 90,080,367 | -70,723 (-0.08%) | -307,986 (-0.34%) | 66,308,389 | 9 |
-| 10 | [Bad Bunny](https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X) | 89,551,181 | +45,272 (+0.05%) | +421,551 (+0.47%) | 126,941,604 | 10 |
-| 11 | [Michael Jackson](https://open.spotify.com/artist/3fMbdgg4jU18AjLCKBhRSm) | 87,446,306 | -330,521 (-0.38%) | -2,390,152 (-2.66%) | 58,118,901 | 11 |
-| 12 | [Katy Perry](https://open.spotify.com/artist/6jJ0s89eD6GaHleKKya26X) | 85,879,433 | +57,700 (+0.07%) | +671,020 (+0.79%) | 43,134,681 | 12 |
-| 13 | [Shakira](https://open.spotify.com/artist/0EmeFodog0BfCgMzAIvKQp) | 83,587,179 | -142,946 (-0.17%) | -1,063,723 (-1.26%) | 47,279,886 | 13 |
-| 14 | [Ed Sheeran](https://open.spotify.com/artist/6eUKZXaKkcviH0Ku9w2n3V) | 82,793,644 | +361,293 (+0.44%) | +2,182,983 (+2.71%) | 129,186,967 | 14 |
-| 15 | [Billie Eilish](https://open.spotify.com/artist/6qqNVTkY8uBg9cP3Jd7DAH) | 77,878,851 | -33,441 (-0.04%) | -649,203 (-0.83%) | 132,318,296 | 16 |
-| 16 | [Maroon 5](https://open.spotify.com/artist/04gDigrS5kc9YWfZHwBETP) | 76,156,788 | +61,325 (+0.08%) | +226,613 (+0.30%) | 49,783,929 | 17 |
-| 17 | [Olivia Rodrigo](https://open.spotify.com/artist/1McMsnEElThX1knmY4oliG) | 75,020,363 | +10,641 (+0.01%) | -179,780 (-0.24%) | 58,986,296 | 18 |
-| 18 | [SZA](https://open.spotify.com/artist/7tYKF4w9nC0nq9CsPZTHyP) | 74,744,517 | +609,123 (+0.82%) | +3,228,502 (+4.51%) | 37,653,047 | 19 |
-| 19 | [Lana Del Rey](https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa) | 74,110,357 | -116,175 (-0.16%) | -1,103,136 (-1.47%) | 62,546,229 | 20 |
-| 20 | [Sia](https://open.spotify.com/artist/5WUlDfRSoLAfcVSX1WnrxN) | 73,995,467 | +330,836 (+0.45%) | +2,166,578 (+3.02%) | 32,454,974 | 21 |
-| 21 | [Eminem](https://open.spotify.com/artist/7dGJo4pcD2V6oG8kP0tJRR) | 73,427,544 | -65,702 (-0.09%) | -229,640 (-0.31%) | 113,422,715 | 22 |
-| 22 | [Pitbull](https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg) | 73,291,484 | -26,572 (-0.04%) | -236,731 (-0.32%) | 13,671,780 | 23 |
-| 23 | [KAROL G](https://open.spotify.com/artist/790FomKkXshlbRYZFtlgla) | 71,341,128 | -7,189 (-0.01%) | +671,665 (+0.95%) | 68,543,758 | 24 |
-| 24 | [J Balvin](https://open.spotify.com/artist/1vyhD5VmyZ7KMfW5gqLgo5) | 71,295,401 | +112,722 (+0.16%) | +914,802 (+1.30%) | 42,686,807 | 25 |
-| 25 | [Kanye West](https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x) | 70,962,462 | -17,806 (-0.03%) | -79,070 (-0.11%) | 35,365,094 | 26 |
-| 26 | [Dua Lipa](https://open.spotify.com/artist/6M2wZ9GZgrQXHCFfjv46we) | 70,881,318 | +277,005 (+0.39%) | +1,611,226 (+2.33%) | 49,579,703 | 27 |
-| 27 | [Calvin Harris](https://open.spotify.com/artist/7CajNmpbOovFoOoasH2HaY) | 70,772,984 | -127,901 (-0.18%) | -910,444 (-1.27%) | 24,375,203 | 28 |
-| 28 | [Kendrick Lamar](https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg) | 68,130,479 | +22,925 (+0.03%) | -123,554 (-0.18%) | 49,569,197 | 29 |
-| 29 | [Daddy Yankee](https://open.spotify.com/artist/4VMYDCV2IEDYJArk749S6m) | 67,805,624 | +82,341 (+0.12%) | +1,126,025 (+1.69%) | 41,170,236 | 30 |
-| 30 | [Tame Impala](https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb) | 67,568,505 | +422,233 (+0.63%) | +2,574,730 (+3.96%) | 12,511,217 | 31 |
-| 31 | [Harry Styles](https://open.spotify.com/artist/6KImCVD70vtIoJWnq6nGn3) | 64,376,384 | -35,513 (-0.06%) | -276,240 (-0.43%) | 36,458,831 | 32 |
-| 32 | [Black Eyed Peas](https://open.spotify.com/artist/1yxSLGMDHlW21z4YXirZDS) | 62,033,718 | +130,584 (+0.21%) | +462,325 (+0.75%) | 11,301,430 | 34 |
-| 33 | [Post Malone](https://open.spotify.com/artist/246dkjvS1zLTtiykXe5h60) | 60,586,755 | -63,315 (-0.10%) | -349,710 (-0.57%) | 49,644,696 | 36 |
-| 34 | [Arctic Monkeys](https://open.spotify.com/artist/7Ln80lUS6He07XvHI8qqHH) | 57,254,397 | +97,015 (+0.17%) | +683,974 (+1.21%) | 36,365,362 | 38 |
-| 35 | [Shreya Ghoshal](https://open.spotify.com/artist/0oOet2f43PA68X5RxKobEy) | 56,647,085 | +12,890 (+0.02%) | +88,097 (+0.16%) | 37,832,918 | 40 |
-| 36 | [Linkin Park](https://open.spotify.com/artist/6XyY86QOPPrYVGvF9ch6wz) | 56,539,748 | -36,205 (-0.06%) | -276,208 (-0.49%) | 36,962,181 | 41 |
-| 37 | [Sean Paul](https://open.spotify.com/artist/3Isy6kedDrgPYoTS1dazA9) | 55,722,196 | -43,367 (-0.08%) | -5,810 (-0.01%) | 6,225,462 | 44 |
-| 38 | [Mariah Carey](https://open.spotify.com/artist/4iHNK0tOyZPYnBU7nGAgpQ) | 55,501,114 | +982,904 (+1.80%) | +6,471,154 (+13.20%) | 13,518,818 | 45 |
-| 39 | [sombr](https://open.spotify.com/artist/4G9NDjRyZFDlJKMRL8hx3S) | 55,325,525 | +21,231 (+0.04%) | -49,052 (-0.09%) | 5,680,840 | 46 |
-| 40 | [Tate McRae](https://open.spotify.com/artist/45dkTj5sMRSjrmBSBeiHym) | 54,449,773 | -426,384 (-0.78%) | -1,841,652 (-3.27%) | 11,933,717 | 50 |
-| 41 | [Fuerza Regida](https://open.spotify.com/artist/0ys2OFYzWYB5hRDLCsBqxt) | 54,421,851 | +277,372 (+0.51%) | +2,062,907 (+3.94%) | 31,079,889 | 51 |
-| 42 | [Sabrina Carpenter](https://open.spotify.com/artist/74KM79TiuVKeVCqs8QtB0B) | 54,267,199 | +146,129 (+0.27%) | +1,045,323 (+1.96%) | 36,103,654 | 52 |
-| 43 | [Halsey](https://open.spotify.com/artist/26VFTg2z8YR0cCuwLzESi2) | 54,229,177 | +19,559 (+0.04%) | -125,743 (-0.23%) | 23,613,124 | 53 |
-| 44 | [Arijit Singh](https://open.spotify.com/artist/4YRxDV8wJFPHPTeXepOstw) | 54,095,714 | +45,862 (+0.08%) | +206,444 (+0.38%) | 198,312,861 | 54 |
-| 45 | [Rauw Alejandro](https://open.spotify.com/artist/1mcTU81TzQhprhouKaTkpq) | 53,852,208 | +246,680 (+0.46%) | +1,206,761 (+2.29%) | 35,569,241 | 55 |
-| 46 | [Alicia Keys](https://open.spotify.com/artist/3DiDSECUqqY1AuBP8qtaIa) | 53,634,449 | -20,382 (-0.04%) | -166,106 (-0.31%) | 14,221,609 | 57 |
-| 47 | [Shawn Mendes](https://open.spotify.com/artist/7n2wHs1TKAczGzO7Dd2rGr) | 53,396,036 | -53,647 (-0.10%) | -326,748 (-0.61%) | 48,238,349 | 59 |
-| 48 | [Ellie Goulding](https://open.spotify.com/artist/0X2BH1fck6amBIoJhDVmmJ) | 52,378,224 | -69,838 (-0.13%) | -481,417 (-0.91%) | 14,281,415 | 60 |
-| 49 | [Future](https://open.spotify.com/artist/1RyvyyTE3xzB2ZywiAwp0i) | 52,373,820 | +5,689 (+0.01%) | +370,835 (+0.71%) | 25,743,065 | 61 |
-| 50 | [Ozuna](https://open.spotify.com/artist/1i8SpTcr7yvPOmcqrbnVXY) | 51,829,187 | +4,775 (+0.01%) | +140,952 (+0.27%) | 42,486,834 | 64 |
-| 51 | [Olivia Dean](https://open.spotify.com/artist/00x1fYSGhdqScXBRpSj3DW) | 51,324,171 | +67,307 (+0.13%) | +575,822 (+1.13%) | 5,646,498 | 65 |
-| 52 | [JAŸ-Z](https://open.spotify.com/artist/3nFkdlSjzX9mRTtwJOzDYB) | 51,272,983 | +3,567 (+0.01%) | +256,194 (+0.50%) | 11,839,273 | 66 |
-| 53 | [The Chainsmokers](https://open.spotify.com/artist/69GGBxA162lTqCwzJG5jLp) | 50,776,319 | -61,185 (-0.12%) | -341,125 (-0.67%) | 22,350,274 | 67 |
-| 54 | [Zara Larsson](https://open.spotify.com/artist/1Xylc3o4UrD53lo9CvFvVg) | 50,088,515 | +37,249 (+0.07%) | -351,655 (-0.70%) | 14,483,024 | 69 |
-| 55 | [The Neighbourhood](https://open.spotify.com/artist/77SW9BnxLY8rJ0RciFqkHh) | 50,034,186 | -59,445 (-0.12%) | -345,867 (-0.69%) | 25,342,905 | 70 |
-| 56 | [JENNIE](https://open.spotify.com/artist/250b0Wlc5Vk0CoUsaCY84M) | 49,945,610 | +153,273 (+0.31%) | +777,636 (+1.58%) | 17,195,518 | 71 |
-| 57 | [Pritam](https://open.spotify.com/artist/1wRPtKGflJrBx9BmLsSwlU) | 49,944,352 | -58,907 (-0.12%) | -221,207 (-0.44%) | 79,361,056 | 72 |
-| 58 | [Khalid](https://open.spotify.com/artist/6LuN9FCkKOj5PcnpouEgny) | 49,676,926 | +36,592 (+0.07%) | +157,713 (+0.32%) | 17,648,189 | 73 |
-| 59 | [Fleetwood Mac](https://open.spotify.com/artist/08GQAI4eElDnROBrJRGE0X) | 49,036,206 | -182,853 (-0.37%) | -1,013,646 (-2.03%) | 16,231,507 | 74 |
-| 60 | [Anuel AA](https://open.spotify.com/artist/2R21vXR83lH98kGeO99Y66) | 48,720,371 | +84,450 (+0.17%) | +503,467 (+1.04%) | 52,140,448 | 75 |
-| 61 | [Maluma](https://open.spotify.com/artist/1r4hJ1h58CWwUQe3MxPuau) | 48,712,662 | +6,387 (+0.01%) | -131,619 (-0.27%) | 42,424,204 | 76 |
-| 62 | [P!nk](https://open.spotify.com/artist/1KCSPY1glIKqW2TotWuXOR) | 48,047,971 | +3,180 (+0.01%) | +51,495 (+0.11%) | 19,300,273 | 77 |
-| 63 | [Radiohead](https://open.spotify.com/artist/4Z8W4fKeB5YxbusRsdQVPb) | 47,093,522 | +42,445 (+0.09%) | +440,588 (+0.94%) | 17,634,595 | 79 |
-| 64 | [Charlie Puth](https://open.spotify.com/artist/6VuMaDnrHyPL1p4EHjYLi7) | 46,126,946 | +173,899 (+0.38%) | +920,861 (+2.04%) | 27,334,546 | 82 |
-| 65 | [Ne-Yo](https://open.spotify.com/artist/21E3waRsmPlU7jZsS13rcj) | 46,103,469 | +20,516 (+0.04%) | +164,651 (+0.36%) | 11,794,095 | 83 |
-| 66 | [OneRepublic](https://open.spotify.com/artist/5Pwc4xIPtQLFEnJriah9YJ) | 45,639,799 | +39,616 (+0.09%) | +252,469 (+0.56%) | 20,219,697 | 84 |
-| 67 | [Don Toliver](https://open.spotify.com/artist/4Gso3d4CscCijv0lmajZWs) | 45,633,933 | +126,831 (+0.28%) | +830,578 (+1.85%) | 10,294,960 | 85 |
-| 68 | [Wiz Khalifa](https://open.spotify.com/artist/137W8MRPWKqSmrBGDBFSop) | 45,433,391 | -154,324 (-0.34%) | -780,147 (-1.69%) | 13,132,426 | 86 |
-| 69 | [DJ Snake](https://open.spotify.com/artist/540vIaP2JwjQb9dm3aArA4) | 45,101,156 | +142,474 (+0.32%) | +769,723 (+1.74%) | 10,034,158 | 87 |
-| 70 | [Nicki Minaj](https://open.spotify.com/artist/0hCNtLu0JehylgoiP8L4Gh) | 45,071,323 | -13,743 (-0.03%) | +168,133 (+0.37%) | 35,325,823 | 88 |
-| 71 | [Myke Towers](https://open.spotify.com/artist/7iK8PXO48WeuP03g8YR51W) | 44,530,373 | +115,473 (+0.26%) | +632,323 (+1.44%) | 25,736,036 | 92 |
-| 72 | [Farruko](https://open.spotify.com/artist/329e4yvIujISKGKz1BZZbO) | 44,256,874 | +161,224 (+0.37%) | +828,142 (+1.91%) | 18,695,489 | 93 |
-| 73 | [ADÉLA](https://open.spotify.com/artist/2qanRMyA5bNuTvz1dK45OP) | 44,209,315 | -59,920 (-0.14%) | -869,842 (-1.93%) | 1,919,670 | 94 |
-| 74 | [Red Hot Chili Peppers](https://open.spotify.com/artist/0L8ExT028jH3ddEcZwqJJ5) | 43,641,608 | -50,173 (-0.11%) | -477,509 (-1.08%) | 25,692,870 | 95 |
-| 75 | [Peso Pluma](https://open.spotify.com/artist/12GqGscKJx3aE4t07u7eVZ) | 42,877,406 | +48,614 (+0.11%) | +381,785 (+0.90%) | 31,464,406 | 96 |
-| 76 | [Swae Lee](https://open.spotify.com/artist/1zNqQNIdeOUZHb8zbZRFMX) | 42,575,007 | -21,664 (-0.05%) | -113,612 (-0.27%) | 4,029,727 | 99 |
-| 77 | [Dominic Fike](https://open.spotify.com/artist/6USv9qhCn6zfxlBQIYJ9qs) | 42,023,715 | -157,593 (-0.37%) | -1,093,970 (-2.54%) | 3,683,514 | 102 |
-| 78 | [Don Omar](https://open.spotify.com/artist/33ScadVnbm2X8kkUqOkC6Z) | 41,666,582 | +45,854 (+0.11%) | +384,885 (+0.93%) | 20,783,223 | 104 |
-| 79 | [Jason Derulo](https://open.spotify.com/artist/07YZf4WDAMNwqr4jfgOZ8y) | 41,474,044 | -71,943 (-0.17%) | -344,289 (-0.82%) | 12,970,429 | 106 |
-| 80 | [Alex Warren](https://open.spotify.com/artist/0fTSzq9jAh4c36UVb4V7CB) | 41,131,632 | -63,817 (-0.15%) | -475,517 (-1.14%) | 5,196,495 | 109 |
-| 81 | [Playboi Carti](https://open.spotify.com/artist/699OTQXzgjhIYAHMy9RyPD) | 40,718,057 | +233,150 (+0.58%) | +1,382,706 (+3.52%) | 17,110,430 | 111 |
-| 82 | [The Cranberries](https://open.spotify.com/artist/7t0rwkOPGlDPEhaOcVtOt9) | 40,445,139 | -200,632 (-0.49%) | -1,342,699 (-3.21%) | 6,631,987 | 112 |
-| 83 | [Hozier](https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS) | 40,375,200 | +46,071 (+0.11%) | +221,915 (+0.55%) | 9,823,803 | 114 |
-| 84 | [Burna Boy](https://open.spotify.com/artist/3wcj11K77LjEY1PkEazffa) | 40,370,353 | -13,174 (-0.03%) | -182,957 (-0.45%) | 18,649,504 | 115 |
-| 85 | [Daniel Caesar](https://open.spotify.com/artist/20wkVLutqVOYrc0kxFs7rA) | 40,369,857 | +103,632 (+0.26%) | +694,383 (+1.75%) | 16,570,937 | 116 |
-| 86 | [Guns N' Roses](https://open.spotify.com/artist/3qm84nBOXUEQ2vnTfUTTFC) | 40,309,805 | -14,092 (-0.03%) | -12,031 (-0.03%) | 39,190,473 | 117 |
-| 87 | [rusowsky](https://open.spotify.com/artist/1XEVu7gdRFfzEFqsPrancH) | 40,222,722 | -24,460 (-0.06%) | -18,812 (-0.05%) | 596,384 | 118 |
-| 88 | [Selena Gomez](https://open.spotify.com/artist/0C8ZW7ezQVs4URX5aX7Kqx) | 40,187,876 | -58,217 (-0.14%) | -437,066 (-1.08%) | 55,359,510 | 119 |
-| 89 | [Grupo Frontera](https://open.spotify.com/artist/6XkjpgcEsYab502Vr1bBeW) | 40,167,955 | +44,799 (+0.11%) | +599,188 (+1.51%) | 9,203,174 | 120 |
-| 90 | [Mac Miller](https://open.spotify.com/artist/4LLpKhyESsyAXpc4laK94U) | 40,157,565 | -49,846 (-0.12%) | -417,127 (-1.03%) | 13,803,739 | 122 |
-| 91 | [RAYE](https://open.spotify.com/artist/5KKpBU5eC2tJDzf0wmlRp2) | 39,785,304 | -295,882 (-0.74%) | -1,214,143 (-2.96%) | 4,709,279 | 123 |
-| 92 | [The Police](https://open.spotify.com/artist/5NGO30tJxFlKixkPSgXcFE) | 39,606,544 | -100,154 (-0.25%) | -747,726 (-1.85%) | 8,820,820 | 124 |
-| 93 | [Romeo Santos](https://open.spotify.com/artist/5lwmRuXgjX8xIwlnauTZIP) | 39,512,481 | +46,141 (+0.12%) | +311,855 (+0.80%) | 33,103,319 | 125 |
-| 94 | [Teddy Swims](https://open.spotify.com/artist/33qOK5uJ8AR2xuQQAhHump) | 39,457,427 | -32,444 (-0.08%) | -284,802 (-0.72%) | 7,209,500 | 126 |
-| 95 | [Nelly Furtado](https://open.spotify.com/artist/2jw70GZXlAI8QzWeY2bgRc) | 39,454,998 | -34,480 (-0.09%) | -316,543 (-0.80%) | 5,793,348 | 127 |
-| 96 | [Ashe](https://open.spotify.com/artist/6P5NO5hzJbuOqSdyPB7SJM) | 39,111,334 | +385,528 (+1.00%) | +2,975,700 (+8.23%) | 3,317,666 | 130 |
-| 97 | [Chappell Roan](https://open.spotify.com/artist/7GlBOeep6PqTfFi59PTUUN) | 38,528,066 | -468,349 (-1.20%) | -3,313,014 (-7.92%) | 8,762,755 | 132 |
-| 98 | [J. Cole](https://open.spotify.com/artist/6l3HvQ5sa6mXTsMTB19rO5) | 38,485,588 | -9,475 (-0.02%) | -157,868 (-0.41%) | 29,321,520 | 133 |
-| 99 | [Jennifer Lopez](https://open.spotify.com/artist/2DlGxzQSjYe5N6G9nkYghR) | 38,400,696 | -61,457 (-0.16%) | -151,444 (-0.39%) | 15,014,926 | 134 |
-| 100 | [Gorillaz](https://open.spotify.com/artist/3AA28KZvwAUcZuOKwyblJQ) | 38,379,239 | +86,287 (+0.23%) | +658,852 (+1.75%) | 17,023,170 | 135 |
+| 1 | [Bruno Mars](https://open.spotify.com/artist/0du5cEVh5yTK9QJze8zA0C) | 122,794,507 | -115,871 (-0.09%) | -207,121 (-0.17%) | 91,124,493 | 1 |
+| 2 | [The Weeknd](https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ) | 117,654,219 | +156,700 (+0.13%) | +687,811 (+0.59%) | 130,676,261 | 2 |
+| 3 | [Rihanna](https://open.spotify.com/artist/5pKCCKE2ajJHZ9KAiaK11H) | 116,215,213 | -64,611 (-0.06%) | -291,164 (-0.25%) | 78,231,711 | 3 |
+| 4 | [Justin Bieber](https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s) | 114,648,401 | +334,973 (+0.29%) | +2,552,293 (+2.28%) | 98,361,186 | 4 |
+| 5 | [Lady Gaga](https://open.spotify.com/artist/1HY2Jd0NmPuamShAr6KMms) | 100,288,448 | -182,315 (-0.18%) | -1,222,632 (-1.20%) | 49,697,568 | 5 |
+| 6 | [Ariana Grande](https://open.spotify.com/artist/66CXWjxzNUsdJxJ2JdwvnR) | 99,202,624 | +448,593 (+0.45%) | +3,399,468 (+3.55%) | 116,779,611 | 6 |
+| 7 | [Taylor Swift](https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02) | 96,142,734 | +49,006 (+0.05%) | -378,091 (-0.39%) | 167,094,697 | 7 |
+| 8 | [Drake](https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4) | 93,954,223 | +22,314 (+0.02%) | -83,676 (-0.09%) | 119,992,701 | 8 |
+| 9 | [Coldplay](https://open.spotify.com/artist/4gzpq5DPGxSnKTe4SA8HAU) | 90,046,431 | -33,936 (-0.04%) | -356,995 (-0.39%) | 66,322,604 | 9 |
+| 10 | [Bad Bunny](https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X) | 89,632,815 | +81,634 (+0.09%) | +423,663 (+0.47%) | 127,003,426 | 10 |
+| 11 | [Michael Jackson](https://open.spotify.com/artist/3fMbdgg4jU18AjLCKBhRSm) | 87,043,381 | -402,925 (-0.46%) | -2,520,598 (-2.81%) | 58,187,002 | 11 |
+| 12 | [Katy Perry](https://open.spotify.com/artist/6jJ0s89eD6GaHleKKya26X) | 85,978,661 | +99,228 (+0.12%) | +954,812 (+1.12%) | 43,149,930 | 12 |
+| 13 | [Shakira](https://open.spotify.com/artist/0EmeFodog0BfCgMzAIvKQp) | 83,417,231 | -169,948 (-0.20%) | -1,109,109 (-1.31%) | 47,301,719 | 13 |
+| 14 | [Ed Sheeran](https://open.spotify.com/artist/6eUKZXaKkcviH0Ku9w2n3V) | 83,079,887 | +286,243 (+0.35%) | +2,190,230 (+2.71%) | 129,202,091 | 14 |
+| 15 | [Billie Eilish](https://open.spotify.com/artist/6qqNVTkY8uBg9cP3Jd7DAH) | 77,821,465 | -57,386 (-0.07%) | -389,297 (-0.50%) | 132,340,536 | 16 |
+| 16 | [Maroon 5](https://open.spotify.com/artist/04gDigrS5kc9YWfZHwBETP) | 76,248,048 | +91,260 (+0.12%) | +416,965 (+0.55%) | 49,794,911 | 17 |
+| 17 | [SZA](https://open.spotify.com/artist/7tYKF4w9nC0nq9CsPZTHyP) | 75,257,455 | +512,938 (+0.69%) | +3,708,989 (+5.18%) | 37,665,093 | 18 |
+| 18 | [Olivia Rodrigo](https://open.spotify.com/artist/1McMsnEElThX1knmY4oliG) | 75,054,511 | +34,148 (+0.05%) | -96,084 (-0.13%) | 59,024,120 | 19 |
+| 19 | [Sia](https://open.spotify.com/artist/5WUlDfRSoLAfcVSX1WnrxN) | 74,309,424 | +313,957 (+0.42%) | +2,194,610 (+3.04%) | 32,460,380 | 20 |
+| 20 | [Lana Del Rey](https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa) | 74,015,265 | -95,092 (-0.13%) | -1,067,467 (-1.42%) | 62,576,528 | 21 |
+| 21 | [Eminem](https://open.spotify.com/artist/7dGJo4pcD2V6oG8kP0tJRR) | 73,356,657 | -70,887 (-0.10%) | -347,685 (-0.47%) | 113,442,626 | 22 |
+| 22 | [Pitbull](https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg) | 73,276,852 | -14,632 (-0.02%) | -60,601 (-0.08%) | 13,676,325 | 23 |
+| 23 | [KAROL G](https://open.spotify.com/artist/790FomKkXshlbRYZFtlgla) | 71,439,172 | +98,044 (+0.14%) | +645,061 (+0.91%) | 68,574,031 | 24 |
+| 24 | [J Balvin](https://open.spotify.com/artist/1vyhD5VmyZ7KMfW5gqLgo5) | 71,357,188 | +61,787 (+0.09%) | +914,060 (+1.30%) | 42,696,604 | 25 |
+| 25 | [Dua Lipa](https://open.spotify.com/artist/6M2wZ9GZgrQXHCFfjv46we) | 71,203,037 | +321,719 (+0.45%) | +2,060,811 (+2.98%) | 49,588,360 | 26 |
+| 26 | [Kanye West](https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x) | 70,865,006 | -97,456 (-0.14%) | -278,316 (-0.39%) | 35,377,375 | 27 |
+| 27 | [Calvin Harris](https://open.spotify.com/artist/7CajNmpbOovFoOoasH2HaY) | 70,646,035 | -126,949 (-0.18%) | -912,843 (-1.28%) | 24,379,232 | 28 |
+| 28 | [Kendrick Lamar](https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg) | 68,143,483 | +13,004 (+0.02%) | -169,120 (-0.25%) | 49,578,346 | 29 |
+| 29 | [Daddy Yankee](https://open.spotify.com/artist/4VMYDCV2IEDYJArk749S6m) | 67,970,584 | +164,960 (+0.24%) | +1,150,285 (+1.72%) | 41,185,968 | 30 |
+| 30 | [Tame Impala](https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb) | 67,919,227 | +350,722 (+0.52%) | +2,886,617 (+4.44%) | 12,520,847 | 31 |
+| 31 | [Harry Styles](https://open.spotify.com/artist/6KImCVD70vtIoJWnq6nGn3) | 64,314,737 | -61,647 (-0.10%) | -240,889 (-0.37%) | 36,466,682 | 32 |
+| 32 | [Black Eyed Peas](https://open.spotify.com/artist/1yxSLGMDHlW21z4YXirZDS) | 62,062,706 | +28,988 (+0.05%) | +566,306 (+0.92%) | 11,305,779 | 34 |
+| 33 | [Post Malone](https://open.spotify.com/artist/246dkjvS1zLTtiykXe5h60) | 60,575,712 | -11,043 (-0.02%) | -209,115 (-0.34%) | 49,649,883 | 36 |
+| 34 | [Arctic Monkeys](https://open.spotify.com/artist/7Ln80lUS6He07XvHI8qqHH) | 57,265,671 | +11,274 (+0.02%) | +619,413 (+1.09%) | 36,377,585 | 38 |
+| 35 | [Shreya Ghoshal](https://open.spotify.com/artist/0oOet2f43PA68X5RxKobEy) | 56,740,421 | +93,336 (+0.16%) | +222,816 (+0.39%) | 37,848,588 | 40 |
+| 36 | [Linkin Park](https://open.spotify.com/artist/6XyY86QOPPrYVGvF9ch6wz) | 56,490,528 | -49,220 (-0.09%) | -323,259 (-0.57%) | 36,975,891 | 41 |
+| 37 | [Mariah Carey](https://open.spotify.com/artist/4iHNK0tOyZPYnBU7nGAgpQ) | 56,430,578 | +929,464 (+1.67%) | +6,776,180 (+13.65%) | 13,522,547 | 42 |
+| 38 | [Sean Paul](https://open.spotify.com/artist/3Isy6kedDrgPYoTS1dazA9) | 55,696,357 | -25,839 (-0.05%) | -76,575 (-0.14%) | 6,227,995 | 45 |
+| 39 | [sombr](https://open.spotify.com/artist/4G9NDjRyZFDlJKMRL8hx3S) | 55,345,722 | +20,197 (+0.04%) | +167,118 (+0.30%) | 5,688,211 | 46 |
+| 40 | [Fuerza Regida](https://open.spotify.com/artist/0ys2OFYzWYB5hRDLCsBqxt) | 54,792,009 | +370,158 (+0.68%) | +2,271,555 (+4.33%) | 31,117,273 | 49 |
+| 41 | [Sabrina Carpenter](https://open.spotify.com/artist/74KM79TiuVKeVCqs8QtB0B) | 54,486,283 | +219,084 (+0.40%) | +1,286,299 (+2.42%) | 36,119,664 | 50 |
+| 42 | [Halsey](https://open.spotify.com/artist/26VFTg2z8YR0cCuwLzESi2) | 54,187,186 | -41,991 (-0.08%) | -99,185 (-0.18%) | 23,616,395 | 52 |
+| 43 | [Arijit Singh](https://open.spotify.com/artist/4YRxDV8wJFPHPTeXepOstw) | 54,163,032 | +67,318 (+0.12%) | +278,567 (+0.52%) | 198,406,722 | 53 |
+| 44 | [Rauw Alejandro](https://open.spotify.com/artist/1mcTU81TzQhprhouKaTkpq) | 54,091,021 | +238,813 (+0.44%) | +1,448,679 (+2.75%) | 35,579,437 | 54 |
+| 45 | [Tate McRae](https://open.spotify.com/artist/45dkTj5sMRSjrmBSBeiHym) | 54,049,900 | -399,873 (-0.73%) | -2,232,357 (-3.97%) | 11,942,083 | 55 |
+| 46 | [Alicia Keys](https://open.spotify.com/artist/3DiDSECUqqY1AuBP8qtaIa) | 53,550,706 | -83,743 (-0.16%) | -268,410 (-0.50%) | 14,226,294 | 58 |
+| 47 | [Shawn Mendes](https://open.spotify.com/artist/7n2wHs1TKAczGzO7Dd2rGr) | 53,376,154 | -19,882 (-0.04%) | -257,805 (-0.48%) | 48,246,718 | 59 |
+| 48 | [Future](https://open.spotify.com/artist/1RyvyyTE3xzB2ZywiAwp0i) | 52,421,724 | +47,904 (+0.09%) | +335,431 (+0.64%) | 25,751,358 | 60 |
+| 49 | [Ellie Goulding](https://open.spotify.com/artist/0X2BH1fck6amBIoJhDVmmJ) | 52,305,291 | -72,933 (-0.14%) | -521,149 (-0.99%) | 14,284,842 | 62 |
+| 50 | [Ozuna](https://open.spotify.com/artist/1i8SpTcr7yvPOmcqrbnVXY) | 51,819,837 | -9,350 (-0.02%) | +118,423 (+0.23%) | 42,498,171 | 64 |
+| 51 | [Olivia Dean](https://open.spotify.com/artist/00x1fYSGhdqScXBRpSj3DW) | 51,406,840 | +82,669 (+0.16%) | +715,872 (+1.41%) | 5,652,724 | 65 |
+| 52 | [JAŸ-Z](https://open.spotify.com/artist/3nFkdlSjzX9mRTtwJOzDYB) | 51,169,715 | -103,268 (-0.20%) | -47,577 (-0.09%) | 11,844,048 | 66 |
+| 53 | [The Chainsmokers](https://open.spotify.com/artist/69GGBxA162lTqCwzJG5jLp) | 50,732,050 | -44,269 (-0.09%) | -368,299 (-0.72%) | 22,353,086 | 67 |
+| 54 | [JENNIE](https://open.spotify.com/artist/250b0Wlc5Vk0CoUsaCY84M) | 50,112,472 | +166,862 (+0.33%) | +990,233 (+2.02%) | 17,204,835 | 69 |
+| 55 | [Zara Larsson](https://open.spotify.com/artist/1Xylc3o4UrD53lo9CvFvVg) | 50,093,377 | +4,862 (+0.01%) | -167,177 (-0.33%) | 14,489,511 | 70 |
+| 56 | [Pritam](https://open.spotify.com/artist/1wRPtKGflJrBx9BmLsSwlU) | 50,002,096 | +57,744 (+0.12%) | -129,791 (-0.26%) | 79,419,505 | 71 |
+| 57 | [The Neighbourhood](https://open.spotify.com/artist/77SW9BnxLY8rJ0RciFqkHh) | 49,981,187 | -52,999 (-0.11%) | -349,035 (-0.69%) | 25,355,114 | 72 |
+| 58 | [Khalid](https://open.spotify.com/artist/6LuN9FCkKOj5PcnpouEgny) | 49,676,338 | -588 (-0.00%) | +134,025 (+0.27%) | 17,650,371 | 73 |
+| 59 | [Fleetwood Mac](https://open.spotify.com/artist/08GQAI4eElDnROBrJRGE0X) | 48,898,401 | -137,805 (-0.28%) | -1,048,637 (-2.10%) | 16,237,319 | 74 |
+| 60 | [Anuel AA](https://open.spotify.com/artist/2R21vXR83lH98kGeO99Y66) | 48,855,628 | +135,257 (+0.28%) | +609,762 (+1.26%) | 52,168,230 | 75 |
+| 61 | [Maluma](https://open.spotify.com/artist/1r4hJ1h58CWwUQe3MxPuau) | 48,707,975 | -4,687 (-0.01%) | -59,262 (-0.12%) | 42,436,132 | 76 |
+| 62 | [P!nk](https://open.spotify.com/artist/1KCSPY1glIKqW2TotWuXOR) | 48,044,587 | -3,384 (-0.01%) | +30,380 (+0.06%) | 19,304,211 | 77 |
+| 63 | [Radiohead](https://open.spotify.com/artist/4Z8W4fKeB5YxbusRsdQVPb) | 47,126,702 | +33,180 (+0.07%) | +490,841 (+1.05%) | 17,642,683 | 79 |
+| 64 | [Charlie Puth](https://open.spotify.com/artist/6VuMaDnrHyPL1p4EHjYLi7) | 46,294,994 | +168,048 (+0.36%) | +1,155,694 (+2.56%) | 27,340,207 | 82 |
+| 65 | [Ne-Yo](https://open.spotify.com/artist/21E3waRsmPlU7jZsS13rcj) | 46,100,104 | -3,365 (-0.01%) | +192,642 (+0.42%) | 11,797,974 | 83 |
+| 66 | [Don Toliver](https://open.spotify.com/artist/4Gso3d4CscCijv0lmajZWs) | 45,762,448 | +128,515 (+0.28%) | +830,082 (+1.85%) | 10,304,245 | 84 |
+| 67 | [OneRepublic](https://open.spotify.com/artist/5Pwc4xIPtQLFEnJriah9YJ) | 45,688,732 | +48,933 (+0.11%) | +219,862 (+0.48%) | 20,223,230 | 85 |
+| 68 | [Wiz Khalifa](https://open.spotify.com/artist/137W8MRPWKqSmrBGDBFSop) | 45,332,926 | -100,465 (-0.22%) | -920,045 (-1.99%) | 13,136,090 | 86 |
+| 69 | [DJ Snake](https://open.spotify.com/artist/540vIaP2JwjQb9dm3aArA4) | 45,254,067 | +152,911 (+0.34%) | +933,481 (+2.11%) | 10,035,909 | 87 |
+| 70 | [Nicki Minaj](https://open.spotify.com/artist/0hCNtLu0JehylgoiP8L4Gh) | 45,067,244 | -4,079 (-0.01%) | +140,366 (+0.31%) | 35,329,034 | 88 |
+| 71 | [Myke Towers](https://open.spotify.com/artist/7iK8PXO48WeuP03g8YR51W) | 44,605,325 | +74,952 (+0.17%) | +664,850 (+1.51%) | 25,744,855 | 92 |
+| 72 | [Farruko](https://open.spotify.com/artist/329e4yvIujISKGKz1BZZbO) | 44,388,108 | +131,234 (+0.30%) | +897,531 (+2.06%) | 18,700,510 | 93 |
+| 73 | [ADÉLA](https://open.spotify.com/artist/2qanRMyA5bNuTvz1dK45OP) | 44,112,284 | -97,031 (-0.22%) | -840,731 (-1.87%) | 1,926,700 | 94 |
+| 74 | [Red Hot Chili Peppers](https://open.spotify.com/artist/0L8ExT028jH3ddEcZwqJJ5) | 43,554,299 | -87,309 (-0.20%) | -490,507 (-1.11%) | 25,699,166 | 96 |
+| 75 | [Peso Pluma](https://open.spotify.com/artist/12GqGscKJx3aE4t07u7eVZ) | 42,908,499 | +31,093 (+0.07%) | +370,044 (+0.87%) | 31,482,345 | 97 |
+| 76 | [Swae Lee](https://open.spotify.com/artist/1zNqQNIdeOUZHb8zbZRFMX) | 42,613,954 | +38,947 (+0.09%) | -5,151 (-0.01%) | 4,032,923 | 99 |
+| 77 | [Dominic Fike](https://open.spotify.com/artist/6USv9qhCn6zfxlBQIYJ9qs) | 41,831,524 | -192,191 (-0.46%) | -1,172,357 (-2.73%) | 3,686,150 | 103 |
+| 78 | [Don Omar](https://open.spotify.com/artist/33ScadVnbm2X8kkUqOkC6Z) | 41,667,753 | +1,171 (+0.00%) | +365,315 (+0.88%) | 20,802,121 | 105 |
+| 79 | [Jason Derulo](https://open.spotify.com/artist/07YZf4WDAMNwqr4jfgOZ8y) | 41,427,866 | -46,178 (-0.11%) | -332,864 (-0.80%) | 12,972,047 | 106 |
+| 80 | [Playboi Carti](https://open.spotify.com/artist/699OTQXzgjhIYAHMy9RyPD) | 41,037,877 | +319,820 (+0.79%) | +1,709,707 (+4.35%) | 17,116,012 | 109 |
+| 81 | [Alex Warren](https://open.spotify.com/artist/0fTSzq9jAh4c36UVb4V7CB) | 41,030,097 | -101,535 (-0.25%) | -554,128 (-1.33%) | 5,199,792 | 110 |
+| 82 | [Daniel Caesar](https://open.spotify.com/artist/20wkVLutqVOYrc0kxFs7rA) | 40,456,016 | +86,159 (+0.21%) | +773,348 (+1.95%) | 16,588,260 | 112 |
+| 83 | [Hozier](https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS) | 40,378,315 | +3,115 (+0.01%) | +241,472 (+0.60%) | 9,825,710 | 115 |
+| 84 | [Burna Boy](https://open.spotify.com/artist/3wcj11K77LjEY1PkEazffa) | 40,353,518 | -16,835 (-0.04%) | -135,015 (-0.33%) | 18,663,203 | 116 |
+| 85 | [The Cranberries](https://open.spotify.com/artist/7t0rwkOPGlDPEhaOcVtOt9) | 40,274,716 | -170,423 (-0.42%) | -1,438,895 (-3.45%) | 6,635,192 | 117 |
+| 86 | [Grupo Frontera](https://open.spotify.com/artist/6XkjpgcEsYab502Vr1bBeW) | 40,262,270 | +94,315 (+0.23%) | +675,988 (+1.71%) | 9,209,451 | 118 |
+| 87 | [Guns N' Roses](https://open.spotify.com/artist/3qm84nBOXUEQ2vnTfUTTFC) | 40,259,423 | -50,382 (-0.12%) | -180,388 (-0.45%) | 39,200,200 | 119 |
+| 88 | [rusowsky](https://open.spotify.com/artist/1XEVu7gdRFfzEFqsPrancH) | 40,246,244 | +23,522 (+0.06%) | +24,565 (+0.06%) | 597,289 | 120 |
+| 89 | [Selena Gomez](https://open.spotify.com/artist/0C8ZW7ezQVs4URX5aX7Kqx) | 40,125,782 | -62,094 (-0.15%) | -459,035 (-1.13%) | 55,364,741 | 121 |
+| 90 | [Mac Miller](https://open.spotify.com/artist/4LLpKhyESsyAXpc4laK94U) | 40,112,999 | -44,566 (-0.11%) | -422,900 (-1.04%) | 13,808,910 | 122 |
+| 91 | [RAYE](https://open.spotify.com/artist/5KKpBU5eC2tJDzf0wmlRp2) | 39,585,627 | -199,677 (-0.50%) | -1,352,913 (-3.30%) | 4,713,127 | 123 |
+| 92 | [Romeo Santos](https://open.spotify.com/artist/5lwmRuXgjX8xIwlnauTZIP) | 39,516,496 | +4,015 (+0.01%) | +300,034 (+0.77%) | 33,124,407 | 124 |
+| 93 | [Ashe](https://open.spotify.com/artist/6P5NO5hzJbuOqSdyPB7SJM) | 39,478,459 | +367,125 (+0.94%) | +3,047,566 (+8.37%) | 3,323,746 | 126 |
+| 94 | [The Police](https://open.spotify.com/artist/5NGO30tJxFlKixkPSgXcFE) | 39,456,688 | -149,856 (-0.38%) | -911,807 (-2.26%) | 8,823,569 | 127 |
+| 95 | [Teddy Swims](https://open.spotify.com/artist/33qOK5uJ8AR2xuQQAhHump) | 39,445,233 | -12,194 (-0.03%) | -251,127 (-0.63%) | 7,212,458 | 128 |
+| 96 | [Nelly Furtado](https://open.spotify.com/artist/2jw70GZXlAI8QzWeY2bgRc) | 39,399,518 | -55,480 (-0.14%) | -221,550 (-0.56%) | 5,796,036 | 129 |
+| 97 | [J. Cole](https://open.spotify.com/artist/6l3HvQ5sa6mXTsMTB19rO5) | 38,465,970 | -19,618 (-0.05%) | -222,506 (-0.58%) | 29,327,839 | 132 |
+| 98 | [Gorillaz](https://open.spotify.com/artist/3AA28KZvwAUcZuOKwyblJQ) | 38,460,764 | +81,525 (+0.21%) | +702,023 (+1.86%) | 17,028,957 | 133 |
+| 99 | [Gracie Abrams](https://open.spotify.com/artist/4tuJ0bMpJh08umKkEXKUI5) | 38,370,880 | +136,599 (+0.36%) | +1,027,103 (+2.75%) | 10,608,200 | 134 |
+| 100 | [Jennifer Lopez](https://open.spotify.com/artist/2DlGxzQSjYe5N6G9nkYghR) | 38,361,907 | -38,789 (-0.10%) | -76,988 (-0.20%) | 15,018,926 | 135 |
 
 ## Most listeners gained in 7 days
 
@@ -115,16 +115,16 @@ Among all 500 tracked artists.
 
 | # | Artist | Change | Monthly listeners |
 |--:|:--|--:|--:|
-| 1 | [Mariah Carey](https://open.spotify.com/artist/4iHNK0tOyZPYnBU7nGAgpQ) | +6,471,154 (+13.20%) | 55,501,114 |
-| 2 | [Wham!](https://open.spotify.com/artist/5lpH0xAS4fVfLkACg9DAuM) | +6,185,999 (+23.54%) | 32,463,480 |
-| 3 | [Kelly Clarkson](https://open.spotify.com/artist/3BmGtnKgCSGYIUhmivXKWX) | +4,373,046 (+13.80%) | 36,052,076 |
-| 4 | [Ariana Grande](https://open.spotify.com/artist/66CXWjxzNUsdJxJ2JdwvnR) | +3,359,850 (+3.52%) | 98,754,031 |
-| 5 | [SZA](https://open.spotify.com/artist/7tYKF4w9nC0nq9CsPZTHyP) | +3,228,502 (+4.51%) | 74,744,517 |
-| 6 | [Ashe](https://open.spotify.com/artist/6P5NO5hzJbuOqSdyPB7SJM) | +2,975,700 (+8.23%) | 39,111,334 |
-| 7 | [Tame Impala](https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb) | +2,574,730 (+3.96%) | 67,568,505 |
-| 8 | [Justin Bieber](https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s) | +2,387,935 (+2.13%) | 114,313,428 |
-| 9 | [Ed Sheeran](https://open.spotify.com/artist/6eUKZXaKkcviH0Ku9w2n3V) | +2,182,983 (+2.71%) | 82,793,644 |
-| 10 | [Sia](https://open.spotify.com/artist/5WUlDfRSoLAfcVSX1WnrxN) | +2,166,578 (+3.02%) | 73,995,467 |
+| 1 | [Mariah Carey](https://open.spotify.com/artist/4iHNK0tOyZPYnBU7nGAgpQ) | +6,776,180 (+13.65%) | 56,430,578 |
+| 2 | [Wham!](https://open.spotify.com/artist/5lpH0xAS4fVfLkACg9DAuM) | +6,481,366 (+24.08%) | 33,394,693 |
+| 3 | [Kelly Clarkson](https://open.spotify.com/artist/3BmGtnKgCSGYIUhmivXKWX) | +4,547,215 (+14.15%) | 36,688,960 |
+| 4 | [SZA](https://open.spotify.com/artist/7tYKF4w9nC0nq9CsPZTHyP) | +3,708,989 (+5.18%) | 75,257,455 |
+| 5 | [Ariana Grande](https://open.spotify.com/artist/66CXWjxzNUsdJxJ2JdwvnR) | +3,399,468 (+3.55%) | 99,202,624 |
+| 6 | [Ashe](https://open.spotify.com/artist/6P5NO5hzJbuOqSdyPB7SJM) | +3,047,566 (+8.37%) | 39,478,459 |
+| 7 | [Tame Impala](https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb) | +2,886,617 (+4.44%) | 67,919,227 |
+| 8 | [Justin Bieber](https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s) | +2,552,293 (+2.28%) | 114,648,401 |
+| 9 | [Fuerza Regida](https://open.spotify.com/artist/0ys2OFYzWYB5hRDLCsBqxt) | +2,271,555 (+4.33%) | 54,792,009 |
+| 10 | [Laufey](https://open.spotify.com/artist/7gW0r5CkdEUMm42w9XpyZO) | +2,216,791 (+9.30%) | 26,047,418 |
 
 ## Most listeners lost in 7 days
 
@@ -132,20 +132,22 @@ Among all 500 tracked artists.
 
 | # | Artist | Change | Monthly listeners |
 |--:|:--|--:|--:|
-| 1 | [Chappell Roan](https://open.spotify.com/artist/7GlBOeep6PqTfFi59PTUUN) | -3,313,014 (-7.92%) | 38,528,066 |
-| 2 | [Michael Jackson](https://open.spotify.com/artist/3fMbdgg4jU18AjLCKBhRSm) | -2,390,152 (-2.66%) | 87,446,306 |
-| 3 | [girl in red](https://open.spotify.com/artist/3uwAm6vQy7kWPS2bciKWx9) | -2,100,470 (-9.75%) | 19,439,275 |
-| 4 | [Tate McRae](https://open.spotify.com/artist/45dkTj5sMRSjrmBSBeiHym) | -1,841,652 (-3.27%) | 54,449,773 |
-| 5 | [The Outfield](https://open.spotify.com/artist/1zxDewzd2j1ZdSBGaYcr0y) | -1,659,690 (-10.68%) | 13,885,686 |
-| 6 | [Zach Bryan](https://open.spotify.com/artist/40ZNYROS4zLfyyBSs2PGe2) | -1,623,639 (-5.33%) | 28,847,698 |
-| 7 | [Ray Dalton](https://open.spotify.com/artist/4e0nWw2r4BoQSKPQ2zpU13) | -1,516,658 (-8.05%) | 17,328,793 |
-| 8 | [Macklemore & Ryan Lewis](https://open.spotify.com/artist/5BcAKTbp20cv7tC5VqPFoC) | -1,516,604 (-7.25%) | 19,401,169 |
-| 9 | [Ryan Lewis](https://open.spotify.com/artist/5mZJerulcERBZV7xnhrVp1) | -1,492,413 (-8.38%) | 16,306,817 |
-| 10 | [Natasha Bedingfield](https://open.spotify.com/artist/7o95ZoZt5ZYn31e9z1Hc0a) | -1,490,247 (-5.80%) | 24,182,432 |
+| 1 | [Chappell Roan](https://open.spotify.com/artist/7GlBOeep6PqTfFi59PTUUN) | -3,413,327 (-8.23%) | 38,063,107 |
+| 2 | [Michael Jackson](https://open.spotify.com/artist/3fMbdgg4jU18AjLCKBhRSm) | -2,520,598 (-2.81%) | 87,043,381 |
+| 3 | [Tate McRae](https://open.spotify.com/artist/45dkTj5sMRSjrmBSBeiHym) | -2,232,357 (-3.97%) | 54,049,900 |
+| 4 | [girl in red](https://open.spotify.com/artist/3uwAm6vQy7kWPS2bciKWx9) | -2,226,476 (-10.43%) | 19,119,331 |
+| 5 | [The Outfield](https://open.spotify.com/artist/1zxDewzd2j1ZdSBGaYcr0y) | -1,717,200 (-11.17%) | 13,655,512 |
+| 6 | [Zach Bryan](https://open.spotify.com/artist/40ZNYROS4zLfyyBSs2PGe2) | -1,692,311 (-5.58%) | 28,650,055 |
+| 7 | [Natasha Bedingfield](https://open.spotify.com/artist/7o95ZoZt5ZYn31e9z1Hc0a) | -1,609,841 (-6.29%) | 23,969,775 |
+| 8 | [Ray Dalton](https://open.spotify.com/artist/4e0nWw2r4BoQSKPQ2zpU13) | -1,547,760 (-8.30%) | 17,091,880 |
+| 9 | [Macklemore & Ryan Lewis](https://open.spotify.com/artist/5BcAKTbp20cv7tC5VqPFoC) | -1,525,775 (-7.38%) | 19,162,570 |
+| 10 | [Ryan Lewis](https://open.spotify.com/artist/5mZJerulcERBZV7xnhrVp1) | -1,511,745 (-8.60%) | 16,065,479 |
 
 ## Data
 
 - [`data/history.csv`](data/history.csv): one row per artist per day since tracking started.
 - [`data/latest.json`](data/latest.json): this day's values for every tracked artist, with changes and top cities.
+
+2 tracked artist(s) have no value for 2026-11-26: the API could not fetch them in this run. Their earlier values are in data/history.csv.
 
 Collected with the [Spotify monthly listeners API](https://spotify.checkleaked.cc/spotify-monthly-listeners-api). Unofficial. The numbers are what Spotify shows on public artist pages; not affiliated with Spotify.
